@@ -10,32 +10,33 @@ namespace Yoakke.SynKit.Parser;
 /// <typeparam name="T">The parsed value type.</typeparam>
 public readonly struct ParseResult<T>
 {
-    private readonly object value;
+    private readonly ParseOk<T> ok;
+    private readonly ParseError error;
 
     /// <summary>
     /// True, if the result is a success.
     /// </summary>
-    public bool IsOk => this.value is ParseOk<T>;
+    public bool IsOk { get; }
 
     /// <summary>
     /// True, if the result is an error.
     /// </summary>
-    public bool IsError => this.value is ParseError;
+    public bool IsError => !IsOk;
 
     /// <summary>
     /// Retrieves the parse as a success.
     /// </summary>
-    public ParseOk<T> Ok => (ParseOk<T>)this.value;
+    public ParseOk<T> Ok => ok;
 
     /// <summary>
     /// Retrieves the parse as an error.
     /// </summary>
-    public ParseError Error => (ParseError)this.value;
+    public ParseError Error => error;
 
     /// <summary>
     /// Retrieves the furthest error for this result.
     /// </summary>
-    public ParseError? FurthestError => this.value is ParseOk<T> ok ? ok.FurthestError : (ParseError)this.value;
+    public ParseError? FurthestError => IsOk ? ok.FurthestError : error;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="ParseResult{T}"/> struct.
@@ -43,7 +44,9 @@ public readonly struct ParseResult<T>
     /// <param name="ok">The successful parse description.</param>
     public ParseResult(ParseOk<T> ok)
     {
-        this.value = ok;
+        this.ok = ok;
+        IsOk = true;
+        error = default!;
     }
 
     /// <summary>
@@ -52,7 +55,9 @@ public readonly struct ParseResult<T>
     /// <param name="error">The error description.</param>
     public ParseResult(ParseError error)
     {
-        this.value = error;
+        this.error = error;
+        IsOk = false;
+        this.ok = default!;
     }
 
     /// <summary>
@@ -75,6 +80,7 @@ public readonly struct ParseResult<T>
     /// <returns>The <see cref="ParseResult{T}"/> constructed from the alternatives.</returns>
     public static ParseResult<T> operator |(ParseResult<T> first, ParseResult<T> second)
     {
+        return first.IsOk ? first.Ok : (second.IsOk ? second.Ok : second.Error);
         if (first.IsOk && second.IsOk) return first.Ok | second.Ok;
         if (first.IsOk) return first.Ok | second.Error;
         if (second.IsOk) return second.Ok | first.Error;

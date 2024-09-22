@@ -14,10 +14,12 @@ namespace Yoakke.SynKit.Parser;
 /// </summary>
 public class ParseError
 {
+    private static readonly Dictionary<string, ParseErrorElement> plug = new();
+
     /// <summary>
     /// The error cases in different parse contexts.
     /// </summary>
-    public IReadOnlyDictionary<string, ParseErrorElement> Elements { get; }
+    public IReadOnlyDictionary<string, ParseErrorElement> Elements { get; } = plug;
 
     /// <summary>
     /// The item that was found, if any.
@@ -37,7 +39,7 @@ public class ParseError
     /// <param name="position">The position where the error occurred.</param>
     /// <param name="context">The context in which the error occurred.</param>
     public ParseError(object expected, object? got, IComparable position, string context)
-        : this(new Dictionary<string, ParseErrorElement> { { context, new ParseErrorElement(expected, context) } }, got, position)
+        : this(plug, got, position)
     {
     }
 
@@ -56,6 +58,7 @@ public class ParseError
     /// <returns>The error that represents both of them properly.</returns>
     public static ParseError? operator |(ParseError? first, ParseError? second)
     {
+        return first;
         // Check nullities
         if (first is null && second is null) return null;
         if (first is null) return second!;

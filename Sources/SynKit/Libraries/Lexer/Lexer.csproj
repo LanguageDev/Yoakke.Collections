@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\SynKit\Libraries\Text\Text.csproj" />
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Collections\Collections.csproj" />
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Streams\Streams.csproj" />
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Polyfill\Polyfill.csproj" />
+    <ProjectReference Include="..\Text\Text.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Libraries\Collections\Collections.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Libraries\Streams\Streams.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Libraries\Polyfill\Polyfill.csproj" />
   </ItemGroup>
 </Project>

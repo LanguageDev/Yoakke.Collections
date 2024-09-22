@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    <!--
+    <PackageReference Include="Yoakke.Synkit.Lexer"            Version="2022.6.14-8.42.51-nightly" />
+    <PackageReference Include="Yoakke.Synkit.Lexer.Generator"  Version="2022.6.14-8.42.51-nightly" />
+    <PackageReference Include="Yoakke.Synkit.Parser"           Version="2022.6.14-8.42.51-nightly" />
+    <PackageReference Include="Yoakke.Synkit.Parser.Generator" Version="2022.6.14-8.42.51-nightly" />
+    -->
+    <ProjectReference Include="..\..\Libraries\Parser\Parser.csproj" />
+    <ProjectReference Include="..\..\Libraries\Lexer.Generator\Lexer.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="False" />
+    <ProjectReference Include="..\..\Libraries\Parser.Generator\Parser.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="False" />
+  </ItemGroup>
+</Project>

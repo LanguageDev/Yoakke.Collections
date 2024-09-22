@@ -5,6 +5,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Yoakke.Collections;
@@ -57,13 +58,21 @@ public sealed class RingBuffer<T> : IDeque<T>
     /// </summary>
     public int Tail => (this.Head + this.Count) % this.Capacity;
 
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static void ThrowOutOfRange()
+    {
+        throw new ArgumentOutOfRangeException("frog");
+    }
+
     /// <inheritdoc/>
     public T this[int index]
     {
         get
         {
-            if (index < 0 || index >= this.Count) throw new ArgumentOutOfRangeException(nameof(index));
-            return this.storage[(this.Head + index) % this.Capacity];
+            if ((uint)index >= this.Count) ThrowOutOfRange();
+            var nd = Head + index;
+            if (nd >= this.Capacity) nd -= this.Capacity;
+            return this.storage[nd];
         }
 
         set

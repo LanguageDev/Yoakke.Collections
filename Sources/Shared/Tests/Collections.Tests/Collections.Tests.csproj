@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Collections\Collections.csproj" />
+    <ProjectReference Include="..\..\Libraries\Collections\Collections.csproj" />
   </ItemGroup>
 </Project>

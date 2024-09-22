@@ -2,10 +2,10 @@
   <Import Project="..\..\..\Props\SourceGenerator.Build.props" />
 
   <ItemGroup>
-    <Compile Include="$(SolutionDir)/Shared\Libraries/Collections/**/*.cs" Link="Collections" Visible="False" />
-    <Compile Remove="$(SolutionDir)/Shared\Libraries/Collections/obj/**/*.cs" />
+    <Compile Include="..\..\../Shared\Libraries/Collections/**/*.cs" Link="Collections" Visible="False" />
+    <Compile Remove="..\..\../Shared\Libraries/Collections/obj/**/*.cs" />
 
-    <Compile Include="$(SolutionDir)/SynKit\Libraries/Automata/**/*.cs" Link="Automata" Visible="False" />
-    <Compile Remove="$(SolutionDir)/SynKit\Libraries/Automata/obj/**/*.cs" />
+    <Compile Include="../Automata/**/*.cs" Link="Automata" Visible="False" />
+    <Compile Remove="../Automata/obj/**/*.cs" />
   </ItemGroup>
 </Project>

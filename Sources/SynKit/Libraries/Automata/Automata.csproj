@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Polyfill\Polyfill.csproj" />
-    <ProjectReference Include="$(SolutionDir)\Shared\Libraries\Collections\Collections.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Libraries\Polyfill\Polyfill.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Libraries\Collections\Collections.csproj" />
   </ItemGroup>
 </Project>
