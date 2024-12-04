@@ -1,0 +1,889 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DenseMap&lt;TKey, TValue&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DenseMap&lt;TKey, TValue&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.Collections.Dense.DenseMap`2">
+  
+  
+  <h1 id="Yoakke_Collections_Dense_DenseMap_2" data-uid="Yoakke.Collections.Dense.DenseMap`2" class="text-break">Class DenseMap&lt;TKey, TValue&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A default <a class="xref" href="Yoakke.Collections.Dense.IDenseMap-2.html">IDenseMap&lt;TKey, TValue&gt;</a> implementation backed by a list of intervals.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DenseMap&lt;TKey, TValue&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Yoakke.Collections.Dense.IDenseMap-2.html">IDenseMap</a>&lt;TKey, TValue&gt;</div>
+    <div><a class="xref" href="Yoakke.Collections.Dense.IReadOnlyDenseMap-2.html">IReadOnlyDenseMap</a>&lt;TKey, TValue&gt;</div>
+    <div><span class="xref">IReadOnlyCollection</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;&gt;</div>
+    <div><span class="xref">ICollection</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.Collections.Dense.html">Yoakke.Collections.Dense</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.Collections.dll</h6>
+  <h5 id="Yoakke_Collections_Dense_DenseMap_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DenseMap&lt;TKey, TValue&gt; : object, IDenseMap&lt;TKey, TValue&gt;, IReadOnlyDenseMap&lt;TKey, TValue&gt;, IReadOnlyCollection&lt;KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;&gt;, ICollection&lt;KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2__ctor.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L54">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2__ctor_" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2__ctor" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor">DenseMap()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseMap-2.html">DenseMap&lt;TKey, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseMap()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Dense_ICombiner__1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.%23ctor(Yoakke.Collections.Dense.ICombiner%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L83">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2__ctor_" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Dense_ICombiner__1__" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor(Yoakke.Collections.Dense.ICombiner{`1})">DenseMap(ICombiner&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseMap-2.html">DenseMap&lt;TKey, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseMap(ICombiner&lt;TValue&gt; combiner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Dense.ICombiner-1.html">ICombiner</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">combiner</span></td>
+        <td><p>The combiner to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.%23ctor(Yoakke.Collections.Intervals.IntervalComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L74">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2__ctor_" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor(Yoakke.Collections.Intervals.IntervalComparer{`0})">DenseMap(IntervalComparer&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseMap-2.html">DenseMap&lt;TKey, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseMap(IntervalComparer&lt;TKey&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.IntervalComparer-1.html">IntervalComparer</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__Yoakke_Collections_Dense_ICombiner__1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.%23ctor(Yoakke.Collections.Intervals.IntervalComparer%7B%600%7D%2CYoakke.Collections.Dense.ICombiner%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L64">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2__ctor_" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__Yoakke_Collections_Dense_ICombiner__1__" data-uid="Yoakke.Collections.Dense.DenseMap`2.#ctor(Yoakke.Collections.Intervals.IntervalComparer{`0},Yoakke.Collections.Dense.ICombiner{`1})">DenseMap(IntervalComparer&lt;TKey&gt;, ICombiner&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseMap-2.html">DenseMap&lt;TKey, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseMap(IntervalComparer&lt;TKey&gt; comparer, ICombiner&lt;TValue&gt; combiner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.IntervalComparer-1.html">IntervalComparer</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The comparer to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Dense.ICombiner-1.html">ICombiner</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">combiner</span></td>
+        <td><p>The combiner to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Combiner.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Combiner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L45">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Combiner_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Combiner*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Combiner" data-uid="Yoakke.Collections.Dense.DenseMap`2.Combiner">Combiner</h4>
+  <div class="markdown level1 summary"><p>The combiner used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICombiner&lt;TValue&gt; Combiner { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Dense.ICombiner-1.html">ICombiner</a>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Comparer.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L40">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Comparer_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Comparer*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Comparer" data-uid="Yoakke.Collections.Dense.DenseMap`2.Comparer">Comparer</h4>
+  <div class="markdown level1 summary"><p>The comparer used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntervalComparer&lt;TKey&gt; Comparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.IntervalComparer-1.html">IntervalComparer</a>&lt;TKey&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Count.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L26">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Count_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Count*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Count" data-uid="Yoakke.Collections.Dense.DenseMap`2.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_IsReadOnly.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L29">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_IsReadOnly_" data-uid="Yoakke.Collections.Dense.DenseMap`2.IsReadOnly*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_IsReadOnly" data-uid="Yoakke.Collections.Dense.DenseMap`2.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Keys.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L32">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Keys_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Keys*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Keys" data-uid="Yoakke.Collections.Dense.DenseMap`2.Keys">Keys</h4>
+  <div class="markdown level1 summary"><p>The intervals that are in this mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Interval&lt;TKey&gt;&gt; Keys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Values.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L35">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Values_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Values*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Values" data-uid="Yoakke.Collections.Dense.DenseMap`2.Values">Values</h4>
+  <div class="markdown level1 summary"><p>The values that are in this mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TValue&gt; Values { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TValue&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Add_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Add(KeyValuePair%7BYoakke.Collections.Intervals.Interval%7B%600%7D%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L92">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Add_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Add*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Add_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1__" data-uid="Yoakke.Collections.Dense.DenseMap`2.Add(KeyValuePair{Yoakke.Collections.Intervals.Interval{`0},`1})">Add(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Add_Yoakke_Collections_Intervals_Interval__0___1_.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Add(Yoakke.Collections.Intervals.Interval%7B%600%7D%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L95">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Add_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Add*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Add_Yoakke_Collections_Intervals_Interval__0___1_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Add(Yoakke.Collections.Intervals.Interval{`0},`1)">Add(Interval&lt;TKey&gt;, TValue)</h4>
+  <div class="markdown level1 summary"><p>Adds an element with the provided interval of keys and value to the mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(Interval&lt;TKey&gt; keys, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The object to use as the keys of the element to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The object to use as the value of the element to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Clear.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L89">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Clear_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Clear*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Clear" data-uid="Yoakke.Collections.Dense.DenseMap`2.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_ContainsKeys_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.ContainsKeys(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L253">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_ContainsKeys_" data-uid="Yoakke.Collections.Dense.DenseMap`2.ContainsKeys*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_ContainsKeys_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseMap`2.ContainsKeys(Yoakke.Collections.Intervals.Interval{`0})">ContainsKeys(Interval&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the mapping contains the keys in the specified interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKeys(Interval&lt;TKey&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the mapping contains the keys in the specified interval, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_CopyTo_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1____System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.CopyTo(KeyValuePair%7BYoakke.Collections.Intervals.Interval%7B%600%7D%2C%601%7D%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L295">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_CopyTo_" data-uid="Yoakke.Collections.Dense.DenseMap`2.CopyTo*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_CopyTo_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1____System_Int32_" data-uid="Yoakke.Collections.Dense.DenseMap`2.CopyTo(KeyValuePair{Yoakke.Collections.Intervals.Interval{`0},`1}[],System.Int32)">CopyTo(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_GetEnumerator.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L305">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_GetEnumerator_" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetEnumerator*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_GetEnumerator" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerator</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_GetIntervalsAndValues_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.GetIntervalsAndValues(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L298">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_GetIntervalsAndValues_" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetIntervalsAndValues*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_GetIntervalsAndValues_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetIntervalsAndValues(Yoakke.Collections.Intervals.Interval{`0})">GetIntervalsAndValues(Interval&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the intervals and values that are associated with the specified interval of keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;&gt; GetIntervalsAndValues(Interval&lt;TKey&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;&gt;</td>
+        <td><p>The sequence of intervals and values that are overlapped with <code data-dev-comment-type="paramref" class="paramref">keys</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_GetValues_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.GetValues(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L292">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_GetValues_" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetValues*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_GetValues_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseMap`2.GetValues(Yoakke.Collections.Intervals.Interval{`0})">GetValues(Interval&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the values that are associated with the specified interval of keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TValue&gt; GetValues(Interval&lt;TKey&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TValue&gt;</td>
+        <td><p>The sequence of values that are overlapped with <code data-dev-comment-type="paramref" class="paramref">keys</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Remove_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Remove(KeyValuePair%7BYoakke.Collections.Intervals.Interval%7B%600%7D%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L230">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Remove_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Remove*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Remove_KeyValuePair_Yoakke_Collections_Intervals_Interval__0___1__" data-uid="Yoakke.Collections.Dense.DenseMap`2.Remove(KeyValuePair{Yoakke.Collections.Intervals.Interval{`0},`1})">Remove(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(KeyValuePair&lt;Interval&lt;TKey&gt;, TValue&gt; item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyValuePair</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;, TValue&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2_Remove_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602.Remove(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L227">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseMap_2_Remove_" data-uid="Yoakke.Collections.Dense.DenseMap`2.Remove*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseMap_2_Remove_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseMap`2.Remove(Yoakke.Collections.Intervals.Interval{`0})">Remove(Interval&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the element with the specified interval of keys from the mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(Interval&lt;TKey&gt; keys)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;TKey&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The keys of the element to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the element is successfully removed, otherwise false.
+This method also returns false if no keys were found in the mapping.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Yoakke.Collections.Dense.IDenseMap-2.html">IDenseMap&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.Collections.Dense.IReadOnlyDenseMap-2.html">IReadOnlyDenseMap&lt;TKey, TValue&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IReadOnlyCollection&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">ICollection&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseMap_2.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseMap%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseMap.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

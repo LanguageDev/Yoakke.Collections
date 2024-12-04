@@ -1,0 +1,1214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BoundComparer&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BoundComparer&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.Collections.Intervals.BoundComparer`1">
+  
+  
+  <h1 id="Yoakke_Collections_Intervals_BoundComparer_1" data-uid="Yoakke.Collections.Intervals.BoundComparer`1" class="text-break">Class BoundComparer&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A comparer that can compare <see cref="!:LowerBound&lt;T>"></see> and <see cref="!:UpperBound&lt;T>"></see> instances.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BoundComparer&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEqualityComparer</span>&lt;<span class="xref">LowerBound</span>&lt;T&gt;&gt;</div>
+    <div><span class="xref">IEqualityComparer</span>&lt;<span class="xref">UpperBound</span>&lt;T&gt;&gt;</div>
+    <div><span class="xref">IComparer</span>&lt;<span class="xref">Bound</span>&lt;T&gt;&gt;</div>
+    <div><span class="xref">IComparer</span>&lt;<span class="xref">LowerBound</span>&lt;T&gt;&gt;</div>
+    <div><span class="xref">IComparer</span>&lt;<span class="xref">UpperBound</span>&lt;T&gt;&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.Collections.Intervals.html">Yoakke.Collections.Intervals</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.Collections.dll</h6>
+  <h5 id="Yoakke_Collections_Intervals_BoundComparer_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BoundComparer&lt;T&gt; : IEqualityComparer&lt;Bound&lt;T&gt;&gt;, IEqualityComparer&lt;LowerBound&lt;T&gt;&gt;, IEqualityComparer&lt;UpperBound&lt;T&gt;&gt;, IComparer&lt;Bound&lt;T&gt;&gt;, IComparer&lt;LowerBound&lt;T&gt;&gt;, IComparer&lt;UpperBound&lt;T&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the endpoint value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1__ctor_IEqualityComparer__0__IComparer__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.%23ctor(IEqualityComparer%7B%600%7D%2CIComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L38">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1__ctor_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1__ctor_IEqualityComparer__0__IComparer__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.#ctor(IEqualityComparer{`0},IComparer{`0})">BoundComparer(IEqualityComparer&lt;T&gt;, IComparer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Intervals.BoundComparer-1.html">BoundComparer&lt;T&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoundComparer(IEqualityComparer&lt;T&gt; equalityComparer, IComparer&lt;T&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;T&gt;</td>
+        <td><span class="parametername">equalityComparer</span></td>
+        <td><p>The <see cref="!:IEqualityComparer&lt;T>"></see> to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;T&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The <see cref="!:IComparer&lt;T>"></see> to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Default.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L21">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Default_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Default*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Default" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Default">Default</h4>
+  <div class="markdown level1 summary"><p>The default instance of the comparer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundComparer&lt;T&gt; Default { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.BoundComparer-1.html">BoundComparer</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_ValueComparer.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.ValueComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L31">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_ValueComparer_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.ValueComparer*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_ValueComparer" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.ValueComparer">ValueComparer</h4>
+  <div class="markdown level1 summary"><p>The used <see cref="!:IComparer&lt;T>"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IComparer&lt;T&gt; ValueComparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_ValueEqualityComparer.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.ValueEqualityComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L26">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_ValueEqualityComparer_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.ValueEqualityComparer*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_ValueEqualityComparer" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.ValueEqualityComparer">ValueEqualityComparer</h4>
+  <div class="markdown level1 summary"><p>The used <see cref="!:IEqualityComparer&lt;T>"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEqualityComparer&lt;T&gt; ValueEqualityComparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Compare_Bound__0__Bound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Compare(Bound%7B%600%7D%2CBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L97">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_Bound__0__Bound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare(Bound{`0},Bound{`0})">Compare(Bound&lt;T&gt;, Bound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(Bound&lt;T&gt; x, Bound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Bound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Compare_LowerBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Compare(LowerBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L108">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_LowerBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare(LowerBound{`0},LowerBound{`0})">Compare(LowerBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(LowerBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Compare_LowerBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Compare(LowerBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L158">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_LowerBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare(LowerBound{`0},UpperBound{`0})">Compare(LowerBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compares a lower and upper bound with a comparer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(LowerBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The <see cref="!:LowerBound&lt;T>"></see> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The <see cref="!:UpperBound&lt;T>"></see> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The result of comparing <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.
+See <see cref="!:IComparer&lt;T>.Compare(T, T)"></see> for further information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Compare_UpperBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Compare(UpperBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L192">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_UpperBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare(UpperBound{`0},LowerBound{`0})">Compare(UpperBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compares an upper and lower bound with a comparer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(UpperBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The <see cref="!:UpperBound&lt;T>"></see> to compare.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The <see cref="!:LowerBound&lt;T>"></see> to compare.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The result of comparing <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.
+See <see cref="!:IComparer&lt;T>.Compare(T, T)"></see> for further information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Compare_UpperBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Compare(UpperBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L130">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Compare_UpperBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Compare(UpperBound{`0},UpperBound{`0})">Compare(UpperBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Compare(UpperBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Equals_Bound__0__Bound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Equals(Bound%7B%600%7D%2CBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L45">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_Bound__0__Bound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals(Bound{`0},Bound{`0})">Equals(Bound&lt;T&gt;, Bound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Bound&lt;T&gt; x, Bound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Bound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Equals_LowerBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Equals(LowerBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L53">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_LowerBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals(LowerBound{`0},LowerBound{`0})">Equals(LowerBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(LowerBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Equals_UpperBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Equals(UpperBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L62">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Equals_UpperBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Equals(UpperBound{`0},UpperBound{`0})">Equals(UpperBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(UpperBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_Bound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.GetHashCode(Bound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L71">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_Bound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode(Bound{`0})">GetHashCode(Bound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHashCode(Bound&lt;T&gt; obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Bound</span>&lt;T&gt;</td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.GetHashCode(LowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L79">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode(LowerBound{`0})">GetHashCode(LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHashCode(LowerBound&lt;T&gt; obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.GetHashCode(UpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L88">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_GetHashCode_UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.GetHashCode(UpperBound{`0})">GetHashCode(UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetHashCode(UpperBound&lt;T&gt; obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_LowerBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.IsTouching(LowerBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L200">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.IsTouching*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_LowerBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.IsTouching(LowerBound{`0},UpperBound{`0})">IsTouching(LowerBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a lower bound is in touching relation with an upper bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTouching(LowerBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The <see cref="!:LowerBound&lt;T>"></see> to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The <see cref="!:UpperBound&lt;T>"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">x</code> is touching <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_UpperBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.IsTouching(UpperBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L213">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.IsTouching*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_IsTouching_UpperBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.IsTouching(UpperBound{`0},LowerBound{`0})">IsTouching(UpperBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a lower bound is in touching relation with an upper bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTouching(UpperBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The <see cref="!:UpperBound&lt;T>"></see> to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The <see cref="!:LowerBound&lt;T>"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">x</code> is touching <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Max_LowerBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Max(LowerBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L237">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Max_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Max*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Max_LowerBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Max(LowerBound{`0},LowerBound{`0})">Max(LowerBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the larger lower bound of the two passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LowerBound&lt;T&gt; Max(LowerBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The first bound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The second bound.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><p>The larger between <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Max_UpperBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Max(UpperBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L245">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Max_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Max*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Max_UpperBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Max(UpperBound{`0},UpperBound{`0})">Max(UpperBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the larger upper bound of the two passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpperBound&lt;T&gt; Max(UpperBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The first bound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The second bound.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><p>The larger between <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Min_LowerBound__0__LowerBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Min(LowerBound%7B%600%7D%2CLowerBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L221">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Min_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Min*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Min_LowerBound__0__LowerBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Min(LowerBound{`0},LowerBound{`0})">Min(LowerBound&lt;T&gt;, LowerBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the smaller lower bound of the two passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LowerBound&lt;T&gt; Min(LowerBound&lt;T&gt; x, LowerBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The first bound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The second bound.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LowerBound</span>&lt;T&gt;</td>
+        <td><p>The smaller between <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1_Min_UpperBound__0__UpperBound__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601.Min(UpperBound%7B%600%7D%2CUpperBound%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L229">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Intervals_BoundComparer_1_Min_" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Min*"></a>
+  <h4 id="Yoakke_Collections_Intervals_BoundComparer_1_Min_UpperBound__0__UpperBound__0__" data-uid="Yoakke.Collections.Intervals.BoundComparer`1.Min(UpperBound{`0},UpperBound{`0})">Min(UpperBound&lt;T&gt;, UpperBound&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the smaller upper bound of the two passed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpperBound&lt;T&gt; Min(UpperBound&lt;T&gt; x, UpperBound&lt;T&gt; y)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The first bound.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The second bound.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UpperBound</span>&lt;T&gt;</td>
+        <td><p>The smaller between <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEqualityComparer&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IEqualityComparer&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IComparer&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IComparer&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">IComparer&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Intervals_BoundComparer_1.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Intervals.BoundComparer%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Intervals/BoundComparer.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

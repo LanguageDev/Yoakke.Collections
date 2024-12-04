@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using the Lexer library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using the Lexer library ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-the-lexer-library">Using the Lexer library</h1>
+
+<p>There are 2 libraries for lexing:</p>
+<ul>
+<li><code>Yoakke.Lexer</code>: Basic structures for lexing, abstraction for a hand-written lexer.</li>
+<li><code>Yoakke.Lexer.Generator</code>: A source generator that can generate a lexer from attribute annotations on token-types.</li>
+</ul>
+<p>Check out the <a href="#basic-structures">basic structures</a>, then either <a href="#using-the-lexer-generator">using the lexer generator</a> or <a href="#rolling-your-own-lexer">rolling your own lexer</a>.</p>
+<h3 id="basic-structures">Basic structures</h3>
+<p>No matter which version you choose, there are some basic structures defined in <code>Yoakke.Lexer</code> that you need to know. Here is a description of them:</p>
+<ol>
+<li><code>IToken</code>: They represent a kind-less token, meaning it's just a text-range and the text value itself. All token implementations should implement this.</li>
+<li><code>IToken&lt;TKind&gt;</code>: They represent a token with some kind tag. Implements <code>IToken</code>.</li>
+<li><code>Token&lt;TKind&gt;</code>: A token with an actual kind, that is defined by the generic parameter <code>TKind</code>. This can be used as a default implementation for <code>IToken&lt;TKind&gt;</code> in most cases.</li>
+<li><code>ILexer</code>: An interface for a lexer that can produce <code>IToken</code>s. All lexers should implement this.</li>
+<li><code>ILexer&lt;TToken&gt;</code>: An interface for a lexer that can produce <code>TToken</code>s. It inherits from <code>ILexer</code>.</li>
+</ol>
+<h3 id="using-the-lexer-generator">Using the lexer generator</h3>
+<p>The lexer generator can be used by annotating a class, to generate a lexer for a token-kind enumeration with a few attributes. Let's see an example:</p>
+<pre><code class="lang-csharp">public enum TokenType
+{
+    [Error] Error,
+    [End] End,
+    [Ignore] [Regex(@&quot;[ \t\r\n]&quot;)] Whitespace,
+    [Ignore] [Regex(@&quot;//[^\r\n]*&quot;)] LineComment,
+
+    [Token(&quot;if&quot;)] KwIf,
+    [Token(&quot;else&quot;)] KwElse,
+    [Regex(@&quot;[A-Za-z_][A-Za-z0-9_]*&quot;)] Identifier,
+
+    [Token(&quot;+&quot;)] Plus,
+    [Token(&quot;-&quot;)] Minus,
+
+    [Regex(@&quot;[0-9]+&quot;)] IntLiteral,
+}
+
+[Lexer(typeof(TokenType))]
+public partial class MyLexer {}
+</code></pre>
+<p>The attribute <code>[Lexer(typeof(TokenType))]</code> tells the source generator to generate the lexer for the <code>TokenType</code> enumeration inside the annotated class <code>MyLexer</code>.  <strong>Note, that it is important to qualify the lexer class as <code>partial</code>.</strong> The generator has to generate code for the class, that can be only achieved through partial classes because of source generator limitations.</p>
+<p>The generated class implements <code>ILexer&lt;Token&lt;TokenType&gt;&gt;</code> and inherits from <code>LexerBase&lt;Token&lt;TokenType&gt;&gt;</code>. You can find more documentation about <code>LexerBase&lt;TToken&gt;</code> later in the chapter <a href="#rolling-your-own-lexer">rolling your own lexer</a>.</p>
+<p>There are two special token types you need to define: <code>Error</code> and <code>End</code>. An <code>Error</code> kind token will be returned when there is no appropriate rule to apply, hence it denotes a lexical error. The <code>End</code> token type will signal the end of the source text.</p>
+<p>All other tokens are defined using regular expressions with the <code>Regex(&quot;...&quot;)</code> attribute. <strong>Important:</strong> These are not your usual RegEx-engine flavored regular expressions. The expression power of these are actually only the set of regular languages, no backtracking support is present. This is so that the regexes can be transformed into <em>Deterministic Finite Automatas</em>, making the resulting lexer very fast. You can find a reference for the supported regex constructs <a href="#supported-regex-constructs">later in this document</a>.
+The <code>Token</code> attribute is a shorthand for escaping all regex characters, meaning that it's a literal match.</p>
+<p><code>Ignore</code> tells the generator that the given token kind should not be part of the resulting token sequence.</p>
+<h4 id="rule-precedence">Rule precedence</h4>
+<p>You might be wondering, how can the library differentiate between regexes, that both match the same input text. In our previous example, <code>&quot;else&quot;</code> could be a valid identifier token too, as it matches the regular expression <code>[A-Za-z_][A-Za-z0-9_]*</code>.</p>
+<p>The rules define their precedence by their order of declaration. Rules defined earlier have higher precedence, that's why <code>&quot;if&quot;</code> and <code>&quot;else&quot;</code> get to match these literals before the identifier rule does. If you defined the identifier rule before the keywords, then <code>&quot;if&quot;</code> and <code>&quot;else&quot;</code> would be recognized as identifiers instead.</p>
+<h4 id="built-in-regexes">Built-in regexes</h4>
+<p>There are some regexes that are very common among language lexemes, so the <code>Regexes</code> class contains some of these definitions:</p>
+<ul>
+<li><code>Regexes.Identifier</code>: A C-style identifier, matching <code>[A-Za-z_][A-Za-z0-9_]*</code></li>
+<li><code>Regexes.Whitespace</code>: Common whitespace characters, matching <code>[ \t\r\n]</code></li>
+<li><code>Regexes.IntLiteral</code>: Decimal numbers, matching <code>[0-9]+</code></li>
+<li><code>Regexes.HexLiteral</code>: A hexadecimal number with <code>0x</code> prefix, matching <code>0x[0-9a-fA-F]+</code></li>
+<li><code>Regexes.StringLiteral</code>: A <em>single-line</em> string-literal that starts and ends with a <code>&quot;</code>, supports any escape character with <code>\</code></li>
+<li><code>Regexes.LineComment</code>: A C-style single-line comment, starting with a <code>//</code>, ending with the line, matching <code>//[^\r\n]*</code></li>
+<li><code>Regexes.MultilineComment</code>: A C-style multi-line comment starting with <code>/*</code> and ending with <code>*/</code>. Please note, that this is <em>not a nestable multi-line comment</em>. That would make it non-regular, so the library wouldn't be able to reasonably support it. If you want to support this, you should probably <a href="#rolling-your-own-lexer">roll your own lexer</a>.</li>
+</ul>
+<p>Rewriting the above sample to use these built-ins:</p>
+<pre><code class="lang-csharp">public enum TokenType
+{
+    [Error] Error,
+    [End] End,
+    [Ignore] [Regex(Regexes.Whitespace)] Whitespace,
+    [Ignore] [Regex(Regexes.LineComment)] LineComment,
+
+    [Token(&quot;if&quot;)] KwIf,
+    [Token(&quot;else&quot;)] KwElse,
+    [Regex(Regexes.Identifier)] Identifier,
+
+    [Token(&quot;+&quot;)] Plus,
+    [Token(&quot;-&quot;)] Minus,
+
+    [Regex(Regexes.IntLiteral)] IntLiteral,
+}
+
+[Lexer(typeof(TokenType))]
+public partial class MyLexer {}
+</code></pre>
+<h4 id="multiple-rules-for-the-same-token">Multiple rules for the same token</h4>
+<p>You might want to give multiple definitions for the same token, and for good reasons. For example, you might want to ignore all comments and whitespaces under the same token name. Another use-case would be if your language allowed both <code>&amp;&amp;</code> and the keyword <code>and</code> as the conjunction operator. Having two separate definitions for these would make parsing very annoying.</p>
+<p>Fortunately, you can define as many rules for a token-type, as you wish. Presenting the above examples:</p>
+<pre><code class="lang-csharp">[Ignore]
+[Regex(Regexes.Whitespace)]
+[Regex(Regexes.LineComment)]
+[Regex(Regexes.MultilineComment)] IgnoreMe,
+
+[Token(&quot;and&quot;)]
+[Token(&quot;&amp;&amp;&quot;)] AndOperator,
+</code></pre>
+<h4 id="supported-regex-constructs">Supported regex constructs</h4>
+<p>Only those regular expressions are supported, that keep their expression power at the regular language level. The constructs are the usual, what you would find in a modern engine - just less of them:</p>
+<ul>
+<li><code>abc</code>: Match the literals <code>a</code>, <code>b</code> and <code>c</code> in sequence</li>
+<li><code>a|b</code>: Match either <code>a</code> or <code>b</code></li>
+<li><code>a(b|c)</code>: Grouping for precedence, match <code>a</code>, then either <code>b</code> or <code>c</code></li>
+<li><code>[abc]</code>: Match any character - <code>a</code>, <code>b</code> or <code>c</code> - in the character class</li>
+<li><code>[a-z]</code>: Match any character in the range <code>a</code> to <code>z</code> (inclusive)</li>
+<li><code>a?</code>: Optionally match <code>a</code></li>
+<li><code>a*</code>: Match <code>a</code> 0 or more times</li>
+<li><code>a+</code>: Match <code>a</code> 1 or more times</li>
+<li><code>a{3,6}</code>: Match <code>a</code> 3 to 6 times (inclusive)</li>
+<li><code>a{3,}</code>: Match <code>a</code> at least 3 times</li>
+</ul>
+<p>Any special characters need to be escaped with <code>\</code>. If you want to match escaped characters, like <code>\n</code>, it is advised to use <code>@</code> strings (verbatim strings).</p>
+<h3 id="rolling-your-own-lexer">Rolling your own lexer</h3>
+<p>If, for some reason you'd like to roll your own lexer - either because your lexer needs to recognize non-regular languages, or just for fun -, the library gives you support to do so. Namely, you can inherit from the <code>LexerBase&lt;TToken&gt;</code> class.</p>
+<p><code>LexerBase&lt;TToken&gt;</code> helps you defined a lexer, that will produce <code>TToken</code>s. All you have to do, is overwrite it's <code>TToken Next()</code> method, to lex the next token from the input. You get a few helper methods for that:</p>
+<ul>
+<li><code>Matches(string, int)</code>: Checks, if the input text matches a given string in some offset</li>
+<li><code>TryPeek(out char, int)</code>: Peeks ahead some characters in the input without consuming it</li>
+<li><code>Peek(int, char)</code>: Peeks ahead some characters in the input, returning a default one, if the offset points past the end of source</li>
+<li><code>Skip()</code>: Skips (consumes) a single character in the input</li>
+<li><code>Skip(int)</code>: Skips (consumes) a given amount of characters in the input</li>
+<li><code>Take(int)</code>: Consumes a given amount of characters in the input and constructs a string from them</li>
+<li><code>TakeToken(int, Func&lt;Range, string, TToken&gt;)</code>: Consumes a given amount of characters in the input and constructs an <code>TToken</code> using the factory function</li>
+<li><code>TakeToken(TKind, int)</code>: Consumes a given amount of characters in the input and constructs a <code>Token&lt;TKind&gt;</code> from them</li>
+</ul>
+<p>For more precise documentation please refer to the API docs for each method.</p>
+<p><code>LexerBase&lt;TToken&gt;</code> works with a <code>System.IO.TextReader</code>, so it can lex from simple strings, files or even from console input - handy for a REPL.</p>
+<p>Let's implement the lexer we generated above, but using <code>LexerBase&lt;TToken&gt;</code>, and making multi-line comments nestable, to have an advantage over the generated implementation:</p>
+<pre><code class="lang-csharp">public class MyLexer : LexerBase&lt;Token&lt;TokenType&gt;&gt;
+{
+    public MyLexer(TextReader reader)
+        : base(reader)
+    {
+    }
+
+    // Just a helper for valid identifier characters
+    private static bool IsIdent(char ch) =&gt; char.IsLetterOrDigit(ch) || ch == '_';
+
+    public Token&lt;TokenType&gt; Next()
+    {
+        while (true)
+        {
+            // If there's nothing to peek, means end of source
+            if (!TryPeek(out var _)) return TakeToken(TokenType.End, 0);
+            // Skip whitespace
+            if (char.IsWhiteSpace(Peek()))
+            {
+                Skip();
+                continue;
+            }
+            // Line-comment
+            if (Matches(&quot;//&quot;))
+            {
+                // Start from 2, as // is not consumed yet
+                int i = 2;
+                // Take advantage of the fact, that the default character can signal the EOF too
+                for (; Peek(i, '\n') != '\n'; ++i);
+                Skip(i);
+                continue;
+            }
+            // Nestable multi-line comment
+            if (Matches(&quot;/*&quot;))
+            {
+                // Start from 2, as /* is not consumed yet
+                int i = 2;
+                int depth = 1;
+                // While there is nesting and also it's not EOF
+                while (depth &gt; 0 &amp;&amp; TryPeek(out var _))
+                {
+                    if (Match(&quot;/*&quot;))
+                    {
+                        ++depth;
+                        i += 2;
+                    }
+                    if (Match(&quot;*/&quot;))
+                    {
+                        --depth;
+                        i += 2;
+                    }
+                    else ++i;
+                }
+                Skip(i);
+                continue;
+            }
+            // Plus and minus
+            if (Peek() == '+') return TakeToken(TokenType.Plus, 1);
+            if (Peek() == '-') return TakeToken(TokenType.Minus, 1);
+            // Int literal
+            if (char.IsDigit(Peek()))
+            {
+                int i = 1;
+                for (; char.IsDigit(Peek(i)); ++i);
+                return TakeToken(TokenType.IntLiteral, i);
+            }
+            // Keywords and identifier
+            if (IsIdent(Peek()))
+            {
+                int i = 1;
+                for (; IsIdent(Peek(i)); ++i);
+                var result = TakeToken(TokenType.Identifier, i);
+                // If it's a keyword, transform the token type
+                if (result.Text == &quot;if&quot;) return new Token&lt;TokenType&gt;(result.Range, result.Text, TokenType.KwIf);
+                else if (result.Text == &quot;else&quot;) return new Token&lt;TokenType&gt;(result.Range, result.Text, TokenType.KwElse);
+                else return result;
+            }
+            // Unknown, error
+            return TakeToken(TokenType.Error, 1);
+        }
+    }
+}
+</code></pre>
+<p>Just like with the generated lexer, text position tracking is taken care of for you.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Documentation/docfx_project/articles/lexer.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

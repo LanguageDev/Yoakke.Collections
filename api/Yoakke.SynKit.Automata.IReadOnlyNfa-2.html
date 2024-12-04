@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IReadOnlyNfa&lt;TState, TSymbol&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IReadOnlyNfa&lt;TState, TSymbol&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2">
+  
+  
+  <h1 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2" class="text-break">Interface IReadOnlyNfa&lt;TState, TSymbol&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a generic, readonly nondeterministic finite automaton.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_States">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.States</a>
+    </div>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_AcceptingStates">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.AcceptingStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_ReachableStates">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.ReachableStates</a>
+    </div>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_StateComparer">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.StateComparer</a>
+    </div>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_Accepts_IEnumerable__1__">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.Accepts(IEnumerable&lt;TSymbol&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html#Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_2_ToDot">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.ToDot()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SynKit.Automata.html">Yoakke.SynKit.Automata</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.Automata.dll</h6>
+  <h5 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IReadOnlyNfa&lt;TState, TSymbol&gt; : IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td><p>The state type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSymbol</span></td>
+        <td><p>The symbol type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonTransitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602.EpsilonTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L27">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonTransitions_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.EpsilonTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonTransitions" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.EpsilonTransitions">EpsilonTransitions</h4>
+  <div class="markdown level1 summary"><p>The epsilon transitions of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;EpsilonTransition&lt;TState&gt;&gt; EpsilonTransitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<span class="xref">Yoakke.SynKit.Automata.EpsilonTransition</span>&lt;TState&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2_InitialStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602.InitialStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L22">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_InitialStates_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.InitialStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_InitialStates" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.InitialStates">InitialStates</h4>
+  <div class="markdown level1 summary"><p>The initial states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;TState&gt; InitialStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2_Determinize__1_Yoakke_SynKit_Automata_IStateCombiner__0___0__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602.Determinize%60%601(Yoakke.SynKit.Automata.IStateCombiner%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L51">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_Determinize_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.Determinize*"></a>
+  <h4 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_Determinize__1_Yoakke_SynKit_Automata_IStateCombiner__0___0__" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.Determinize``1(Yoakke.SynKit.Automata.IStateCombiner{`0,``0})">Determinize&lt;TResultState&gt;(IStateCombiner&lt;TState, TResultState&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs an equivalent DFA from this NFA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDfa&lt;TResultState, TSymbol&gt; Determinize&lt;TResultState&gt;(IStateCombiner&lt;TState, TResultState&gt; combiner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Automata.IStateCombiner-2.html">IStateCombiner</a>&lt;TState, TResultState&gt;</td>
+        <td><span class="parametername">combiner</span></td>
+        <td><p>The state combiner to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Automata.IDfa-2.html">IDfa</a>&lt;TResultState, TSymbol&gt;</td>
+        <td><p>The constructed DFA.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResultState</span></td>
+        <td><p>The result state type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonClosure__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602.EpsilonClosure(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L43">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonClosure_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.EpsilonClosure*"></a>
+  <h4 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_EpsilonClosure__0_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.EpsilonClosure(`0)">EpsilonClosure(TState)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the epsilon-closure of a given state, which is all the states reachable with only
+epsilon transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TState&gt; EpsilonClosure(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state to calculate the epsilon-closure for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TState&gt;</td>
+        <td><p>The states of the epsilon-closure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2_GetTransitions__0__1_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602.GetTransitions(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L35">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_GetTransitions_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.GetTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_IReadOnlyNfa_2_GetTransitions__0__1_" data-uid="Yoakke.SynKit.Automata.IReadOnlyNfa`2.GetTransitions(`0,`1)">GetTransitions(TState, TSymbol)</h4>
+  <div class="markdown level1 summary"><p>Gets all transitions that are valid from a state on an input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TState&gt; GetTransitions(TState from, TSymbol on)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSymbol</span></td>
+        <td><span class="parametername">on</span></td>
+        <td><p>The symbol to transition on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TState&gt;</td>
+        <td><p>The set of states that are valid from the starting set on the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.NfaExtensions.html#Yoakke_SynKit_Automata_NfaExtensions_GetTransitions__2_Yoakke_SynKit_Automata_IReadOnlyNfa___0___1__Yoakke_SynKit_Automata_StateSet___0____1_">NfaExtensions.GetTransitions&lt;TState, TSymbol&gt;(IReadOnlyNfa&lt;TState, TSymbol&gt;, StateSet&lt;TState&gt;, TSymbol)</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.NfaExtensions.html#Yoakke_SynKit_Automata_NfaExtensions_Determinize__2_Yoakke_SynKit_Automata_IReadOnlyNfa___0___1__">NfaExtensions.Determinize&lt;TState, TSymbol&gt;(IReadOnlyNfa&lt;TState, TSymbol&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_IReadOnlyNfa_2.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.IReadOnlyNfa%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/IReadOnlyNfa.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

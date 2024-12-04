@@ -1,0 +1,1310 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SymbolExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SymbolExtensions
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions">
+  
+  
+  <h1 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions" class="text-break">Class SymbolExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension functionalities for <see cref="!:ISymbol"></see>s.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SymbolExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SourceGenerator.Common.RoslynExtensions.html">Yoakke.SourceGenerator.Common.RoslynExtensions</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.Parser.Generator.dll</h6>
+  <h5 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SymbolExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_CanDeclareInsideExternally_ISymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.CanDeclareInsideExternally(ISymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L57">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_CanDeclareInsideExternally_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.CanDeclareInsideExternally*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_CanDeclareInsideExternally_ISymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.CanDeclareInsideExternally(ISymbol)">CanDeclareInsideExternally(ISymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if an <see cref="!:ISymbol"></see> can accept declarations from other source files.
+This usually means that the symbol is a namespace or is in partial type definitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CanDeclareInsideExternally(this ISymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> accepts declarations inside it from other sources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_IAssemblySymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(IAssemblySymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L284">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_IAssemblySymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(IAssemblySymbol)">GetAllDeclaredTypes(IAssemblySymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves all <see cref="!:INamedTypeSymbol"></see>s defined in the given <see cref="!:IAssemblySymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;INamedTypeSymbol&gt; GetAllDeclaredTypes(this IAssemblySymbol assembly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IAssemblySymbol</span></td>
+        <td><span class="parametername">assembly</span></td>
+        <td><p>The <see cref="!:IAssemblySymbol"></see> to search for types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">INamedTypeSymbol</span>&gt;</td>
+        <td><p>The sequence of declared types in <code data-dev-comment-type="paramref" class="paramref">assembly</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(INamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L311">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(INamedTypeSymbol)">GetAllDeclaredTypes(INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves all <see cref="!:INamedTypeSymbol"></see>s defined in the given <see cref="!:INamedTypeSymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;INamedTypeSymbol&gt; GetAllDeclaredTypes(this INamedTypeSymbol type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The <see cref="!:INamedTypeSymbol"></see> to search for types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">INamedTypeSymbol</span>&gt;</td>
+        <td><p>The sequence of declared types in <code data-dev-comment-type="paramref" class="paramref">type</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_INamespaceSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(INamespaceSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L292">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAllDeclaredTypes_INamespaceSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAllDeclaredTypes(INamespaceSymbol)">GetAllDeclaredTypes(INamespaceSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves all <see cref="!:INamedTypeSymbol"></see>s defined in the given <see cref="!:INamespaceSymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;INamedTypeSymbol&gt; GetAllDeclaredTypes(this INamespaceSymbol namespace)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INamespaceSymbol</span></td>
+        <td><span class="parametername">namespace</span></td>
+        <td><p>The <see cref="!:INamespaceSymbol"></see> to search for types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">INamedTypeSymbol</span>&gt;</td>
+        <td><p>The sequence of declared types in <code data-dev-comment-type="paramref" class="paramref">namespace</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute_ISymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute(ISymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L229">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute_ISymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute(ISymbol,INamedTypeSymbol)">GetAttribute(ISymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a given <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AttributeData GetAttribute(this ISymbol symbol, INamedTypeSymbol attributeSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The symbol of the attribute to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AttributeData</span></td>
+        <td><p>The found <see cref="!:AttributeData"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute__1_ISymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute%60%601(ISymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L216">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttribute__1_ISymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttribute``1(ISymbol,INamedTypeSymbol)">GetAttribute&lt;T&gt;(ISymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves a given <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetAttribute&lt;T&gt;(this ISymbol symbol, INamedTypeSymbol attributeSymbol)
+    where T : new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The symbol of the attribute to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The found and parsed <see cref="!:AttributeData"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the structure to parse into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes_ISymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes(ISymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L195">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes_ISymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes(ISymbol,INamedTypeSymbol)">GetAttributes(ISymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves all <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see> of the same attribute type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;AttributeData&gt; GetAttributes(this ISymbol symbol, INamedTypeSymbol attributeSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The symbol of the attribute to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;<span class="xref">AttributeData</span>&gt;</td>
+        <td><p>The found <see cref="!:AttributeData"></see> list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes__1_ISymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes%60%601(ISymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L183">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetAttributes__1_ISymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetAttributes``1(ISymbol,INamedTypeSymbol)">GetAttributes&lt;T&gt;(ISymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves all <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see> of the same attribute type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;T&gt; GetAttributes&lt;T&gt;(this ISymbol symbol, INamedTypeSymbol attributeSymbol)
+    where T : new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The symbol of the attribute to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
+        <td><p>The found <see cref="!:AttributeData"></see> list parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type of the structure to parse into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetContainingTypeChain_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetContainingTypeChain(INamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L65">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetContainingTypeChain_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetContainingTypeChain*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetContainingTypeChain_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetContainingTypeChain(INamedTypeSymbol)">GetContainingTypeChain(INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;INamedTypeSymbol&gt; GetContainingTypeChain(this INamedTypeSymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">INamedTypeSymbol</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeEnclosure_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeEnclosure(INamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L78">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeEnclosure_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeEnclosure*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeEnclosure_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeEnclosure(INamedTypeSymbol)">GetTypeEnclosure(INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TypeEnclosure GetTypeEnclosure(this INamedTypeSymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Yoakke.SourceGenerator.Common.RoslynExtensions.TypeEnclosure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeKindName_ITypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeKindName(ITypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L26">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeKindName_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeKindName*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_GetTypeKindName_ITypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.GetTypeKindName(ITypeSymbol)">GetTypeKindName(ITypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the type kind of a <see cref="!:ISymbol"></see> that can be used in codegen.
+This can be 'class', 'struct' or 'record'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetTypeKindName(this ITypeSymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to get the kind of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The code-friendly name of the type kind.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasAttribute_ISymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasAttribute(ISymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L206">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasAttribute_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasAttribute*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasAttribute_ISymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasAttribute(ISymbol,INamedTypeSymbol)">HasAttribute(ISymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks if a <see cref="!:ISymbol"></see> has a given attribute.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAttribute(this ISymbol symbol, INamedTypeSymbol attributeSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The attribute symbol to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> has an attribut <code data-dev-comment-type="paramref" class="paramref">attributeSymbol</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasBackingField_IPropertySymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasBackingField(IPropertySymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L172">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasBackingField_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasBackingField*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasBackingField_IPropertySymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasBackingField(IPropertySymbol)">HasBackingField(IPropertySymbol)</h4>
+  <div class="markdown level1 summary"><p>Determines if the given property has a backing field or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBackingField(this IPropertySymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IPropertySymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:IPropertySymbol"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> has a backing field.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasNoUserDefinedCtors_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasNoUserDefinedCtors(INamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L325">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasNoUserDefinedCtors_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasNoUserDefinedCtors*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_HasNoUserDefinedCtors_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.HasNoUserDefinedCtors(INamedTypeSymbol)">HasNoUserDefinedCtors(INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a type has no user-defined constructors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasNoUserDefinedCtors(this INamedTypeSymbol type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The <see cref="!:INamedTypeSymbol"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">type</code> has no user-defined constructors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_ITypeSymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface(ITypeSymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L136">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_ITypeSymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface(ITypeSymbol,INamedTypeSymbol)">ImplementsGenericInterface(ITypeSymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a <see cref="!:ISymbol"></see> implements a generic interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ImplementsGenericInterface(this ITypeSymbol symbol, INamedTypeSymbol interfaceSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check the interface for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">interfaceSymbol</span></td>
+        <td><p>The generic interface symbol to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> implements <code data-dev-comment-type="paramref" class="paramref">interfaceSymbol</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_ITypeSymbol_INamedTypeSymbol_System_Nullable_IReadOnlyList_ITypeSymbol____.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface(ITypeSymbol%2CINamedTypeSymbol%2CSystem.Nullable%7BIReadOnlyList%7BITypeSymbol%7D%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L147">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsGenericInterface_ITypeSymbol_INamedTypeSymbol_System_Nullable_IReadOnlyList_ITypeSymbol____" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsGenericInterface(ITypeSymbol,INamedTypeSymbol,System.Nullable{IReadOnlyList{ITypeSymbol}}@)">ImplementsGenericInterface(ITypeSymbol, INamedTypeSymbol, out Nullable&lt;IReadOnlyList&lt;ITypeSymbol&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a <see cref="!:ISymbol"></see> implements a generic interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ImplementsGenericInterface(this ITypeSymbol symbol, INamedTypeSymbol interfaceSymbol, out IReadOnlyList&lt;ITypeSymbol&gt;? genericArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check the interface for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">interfaceSymbol</span></td>
+        <td><p>The generic interface symbol to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<span class="xref">ITypeSymbol</span>&gt;&gt;</td>
+        <td><span class="parametername">genericArgs</span></td>
+        <td><p>The passed in type-arguments for <code data-dev-comment-type="paramref" class="paramref">interfaceSymbol</code> are written here,
+in case <code data-dev-comment-type="paramref" class="paramref">symbol</code> implements it.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> implements <code data-dev-comment-type="paramref" class="paramref">interfaceSymbol</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsInterface_ITypeSymbol_INamedTypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsInterface(ITypeSymbol%2CINamedTypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L126">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsInterface_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsInterface*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_ImplementsInterface_ITypeSymbol_INamedTypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.ImplementsInterface(ITypeSymbol,INamedTypeSymbol)">ImplementsInterface(ITypeSymbol, INamedTypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a <see cref="!:ISymbol"></see> implements a given interface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ImplementsInterface(this ITypeSymbol symbol, INamedTypeSymbol interfaceSymbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check the interface for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">interfaceSymbol</span></td>
+        <td><p>The interface symbol to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> implements <code data-dev-comment-type="paramref" class="paramref">interfaceSymbol</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsNested_ISymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsNested(ISymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L49">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsNested_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsNested*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsNested_ISymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsNested(ISymbol)">IsNested(ISymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a <see cref="!:ISymbol"></see> is a nested type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNested(this ISymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> is a nested type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsPartial_ITypeSymbol_.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsPartial(ITypeSymbol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L41">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsPartial_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsPartial*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_IsPartial_ITypeSymbol_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.IsPartial(ITypeSymbol)">IsPartial(ITypeSymbol)</h4>
+  <div class="markdown level1 summary"><p>Checks, if a <see cref="!:ITypeSymbol"></see>s declaration is partial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPartial(this ITypeSymbol symbol)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ITypeSymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ITypeSymbol"></see> to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">symbol</code> is declared partial.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute_ISymbol_INamedTypeSymbol_AttributeData__.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute(ISymbol%2CINamedTypeSymbol%2CAttributeData%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L268">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute_ISymbol_INamedTypeSymbol_AttributeData__" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute(ISymbol,INamedTypeSymbol,AttributeData@)">TryGetAttribute(ISymbol, INamedTypeSymbol, out AttributeData)</h4>
+  <div class="markdown level1 summary"><p>Tries to retrieve a given <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetAttribute(this ISymbol symbol, INamedTypeSymbol attributeSymbol, out AttributeData attributeData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The attribute symbol to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">AttributeData</span></td>
+        <td><span class="parametername">attributeData</span></td>
+        <td><p>The <see cref="!:AttributeData"></see> gets written here, if it's found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the attribute <code data-dev-comment-type="paramref" class="paramref">attributeSymbol</code> is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute__1_ISymbol_INamedTypeSymbol___0__.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute%60%601(ISymbol%2CINamedTypeSymbol%2C%60%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L243">View Source</a>
+  </span>
+  <a id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute_" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute*"></a>
+  <h4 id="Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions_TryGetAttribute__1_ISymbol_INamedTypeSymbol___0__" data-uid="Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions.TryGetAttribute``1(ISymbol,INamedTypeSymbol,``0@)">TryGetAttribute&lt;T&gt;(ISymbol, INamedTypeSymbol, out T)</h4>
+  <div class="markdown level1 summary"><p>Tries to retrieve a given <see cref="!:AttributeData"></see> attached to a <see cref="!:ISymbol"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetAttribute&lt;T&gt;(this ISymbol symbol, INamedTypeSymbol attributeSymbol, out T result)
+    where T : new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymbol</span></td>
+        <td><span class="parametername">symbol</span></td>
+        <td><p>The <see cref="!:ISymbol"></see> to search in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">INamedTypeSymbol</span></td>
+        <td><span class="parametername">attributeSymbol</span></td>
+        <td><p>The attribute symbol to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The parsed structure gets written here, an attribute is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the attribute <code data-dev-comment-type="paramref" class="paramref">attributeSymbol</code> is found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the structure to parse into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SourceGenerator_Common_RoslynExtensions_SymbolExtensions.md&amp;value=---%0Auid%3A%20Yoakke.SourceGenerator.Common.RoslynExtensions.SymbolExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/SourceGenerator.Common/RoslynExtensions/SymbolExtensions.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

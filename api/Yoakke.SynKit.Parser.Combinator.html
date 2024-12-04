@@ -1,0 +1,2417 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Combinator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Combinator
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SynKit.Parser.Combinator">
+  
+  
+  <h1 id="Yoakke_SynKit_Parser_Combinator" data-uid="Yoakke.SynKit.Parser.Combinator" class="text-break">Class Combinator
+  </h1>
+  <div class="markdown level0 summary"><p>Parser combinator logic implementation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Combinator</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SynKit.Parser.html">Yoakke.SynKit.Parser</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.Parser.dll</h6>
+  <h5 id="Yoakke_SynKit_Parser_Combinator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Combinator : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L256">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L133">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs an alternative of parsers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; left, Combinator.Parser&lt;TItem, TResult&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The first alternative parser to combine.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The second alternative parser to combine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>A new parser that tries both <code data-dev-comment-type="paramref" class="paramref">left</code> and <code data-dev-comment-type="paramref" class="paramref">right</code>, and returns
+the succeeding result that got further.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L268">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L284">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3, Combinator.Parser&lt;TItem, TResult&gt; p4)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L302">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3, Combinator.Parser&lt;TItem, TResult&gt; p4, Combinator.Parser&lt;TItem, TResult&gt; p5)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L322">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3, Combinator.Parser&lt;TItem, TResult&gt; p4, Combinator.Parser&lt;TItem, TResult&gt; p5, Combinator.Parser&lt;TItem, TResult&gt; p6)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L344">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3, Combinator.Parser&lt;TItem, TResult&gt; p4, Combinator.Parser&lt;TItem, TResult&gt; p5, Combinator.Parser&lt;TItem, TResult&gt; p6, Combinator.Parser&lt;TItem, TResult&gt; p7)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p7</span></td>
+        <td><p>The seventh alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Alt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L368">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Alt_" data-uid="Yoakke.SynKit.Parser.Combinator.Alt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Alt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary amounts of alternatives. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Alt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___1__">Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, Combinator.Parser&lt;TItem, TResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Alt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; p1, Combinator.Parser&lt;TItem, TResult&gt; p2, Combinator.Parser&lt;TItem, TResult&gt; p3, Combinator.Parser&lt;TItem, TResult&gt; p4, Combinator.Parser&lt;TItem, TResult&gt; p5, Combinator.Parser&lt;TItem, TResult&gt; p6, Combinator.Parser&lt;TItem, TResult&gt; p7, Combinator.Parser&lt;TItem, TResult&gt; p8)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p7</span></td>
+        <td><p>The seventh alternative parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">p8</span></td>
+        <td><p>The eight alternative parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>The combined alternative parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The result type of the parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Char_System_Char_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Char(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L82">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Char_" data-uid="Yoakke.SynKit.Parser.Combinator.Char*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Char_System_Char_" data-uid="Yoakke.SynKit.Parser.Combinator.Char(System.Char)">Char(Char)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser, that takes a single character, if it matches a specified one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;char, char&gt; Char(char ch)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">ch</span></td>
+        <td><p>The character to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;<span class="xref">System.Char</span>, <span class="xref">System.Char</span>&gt;</td>
+        <td><p>A new parser, that tries to match a character with <code data-dev-comment-type="paramref" class="paramref">ch</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Item__1.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Item%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L49">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Item_" data-uid="Yoakke.SynKit.Parser.Combinator.Item*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Item__1" data-uid="Yoakke.SynKit.Parser.Combinator.Item``1">Item&lt;TItem&gt;()</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser, that takes a single element from the input stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TItem&gt; Item&lt;TItem&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TItem&gt;</td>
+        <td><p>A new parser, that takes a single element from the input stream, if there is any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Item__1___0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Item%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L63">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Item_" data-uid="Yoakke.SynKit.Parser.Combinator.Item*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Item__1___0_" data-uid="Yoakke.SynKit.Parser.Combinator.Item``1(``0)">Item&lt;TItem&gt;(TItem)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser, that takes a single element from the input stream, if it matches the given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TItem&gt; Item&lt;TItem&gt;(TItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TItem</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TItem&gt;</td>
+        <td><p>A new parser, that takes a single element from the input stream, if it equals <code data-dev-comment-type="paramref" class="paramref">item</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Kind__1___0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Kind%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L109">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Kind_" data-uid="Yoakke.SynKit.Parser.Combinator.Kind*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Kind__1___0_" data-uid="Yoakke.SynKit.Parser.Combinator.Kind``1(``0)">Kind&lt;TKind&gt;(TKind)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser, that takes a single token, if its kind matches the specified one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;IToken&lt;TKind&gt;, IToken&lt;TKind&gt;&gt; Kind&lt;TKind&gt;(TKind kind)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TKind</span></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The token kind to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;<a class="xref" href="Yoakke.SynKit.Lexer.IToken-1.html">IToken</a>&lt;TKind&gt;, <a class="xref" href="Yoakke.SynKit.Lexer.IToken-1.html">IToken</a>&lt;TKind&gt;&gt;</td>
+        <td><p>A new parser, that tries to match a token with kind <code data-dev-comment-type="paramref" class="paramref">kind</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKind</span></td>
+        <td><p>The token kind type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Opt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Opt%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L216">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Opt_" data-uid="Yoakke.SynKit.Parser.Combinator.Opt*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Opt__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Opt``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Opt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser that optionally parses an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Opt&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The optional element parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>A new parser that always succeeds and includes the succeeding value, of the element parser succeeded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Parse__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__IPeekableStream___0__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Parse%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CIPeekableStream%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L35">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Parse_" data-uid="Yoakke.SynKit.Parser.Combinator.Parse*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Parse__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__IPeekableStream___0__" data-uid="Yoakke.SynKit.Parser.Combinator.Parse``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},IPeekableStream{``0})">Parse&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;, IPeekableStream&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Applies a parser to some input, consuming the parsed tokens on success.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ParseResult&lt;TResult&gt; Parse&lt;TItem, TResult&gt;(this Combinator.Parser&lt;TItem, TResult&gt; parser, IPeekableStream&lt;TItem&gt; stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">parser</span></td>
+        <td><p>The parser to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPeekableStream</span>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to parse from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.ParseResult-1.html">ParseResult</a>&lt;TResult&gt;</td>
+        <td><p>The result of parsing with <code data-dev-comment-type="paramref" class="paramref">parser</code> on <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Rep0__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Rep0%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L173">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Rep0_" data-uid="Yoakke.SynKit.Parser.Combinator.Rep0*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Rep0__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Rep0``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Rep0&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser for 0 or more repetitions of an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, IReadOnlyList&lt;TResult&gt;&gt; Rep0&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The repeated element parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">IReadOnlyList</span>&lt;TResult&gt;&gt;</td>
+        <td><p>A new parser that always succeeds, and parses <code data-dev-comment-type="paramref" class="paramref">element</code> as many times, as it
+succeeds. The results are collected into a list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Rep1__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Rep1%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L197">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Rep1_" data-uid="Yoakke.SynKit.Parser.Combinator.Rep1*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Rep1__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Rep1``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Rep1&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser for 1 or more repetitions of an element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, IReadOnlyList&lt;TResult&gt;&gt; Rep1&lt;TItem, TResult&gt;(Combinator.Parser&lt;TItem, TResult&gt; element)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The repeated element parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">IReadOnlyList</span>&lt;TResult&gt;&gt;</td>
+        <td><p>A new parser that succeeds as long as it matches at least one element, and continues as many times, as it
+succeeds. The results are collected into a list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%602(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L390">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__2_Yoakke_SynKit_Parser_Combinator_Parser___0___1__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``2(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1})">Seq&lt;TItem, T1&gt;(Combinator.Parser&lt;TItem, T1&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, T1&gt; Seq&lt;TItem, T1&gt;(Combinator.Parser&lt;TItem, T1&gt; p1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%603(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L146">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``3(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2})">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a sequence of parsers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (TLeftResult, TRightResult)&gt; Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt; left, Combinator.Parser&lt;TItem, TRightResult&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TLeftResult&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The first parser to combine.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TRightResult&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The second parser to combine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;TLeftResult, TRightResult&gt;&gt;</td>
+        <td><p>A new parser that first tries to parse <code data-dev-comment-type="paramref" class="paramref">left</code>, and if that succeeds,
+parses <code data-dev-comment-type="paramref" class="paramref">right</code>, and returns their combined results in a tuple.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TLeftResult</span></td>
+        <td><p>The parsed value type of <code data-dev-comment-type="paramref" class="paramref">left</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TRightResult</span></td>
+        <td><p>The parsed value type of <code data-dev-comment-type="paramref" class="paramref">right</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__4_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%604(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L404">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__4_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``4(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3})">Seq&lt;TItem, T1, T2, T3&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3)&gt; Seq&lt;TItem, T1, T2, T3&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__5_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%605(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%604%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L425">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__5_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``5(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3},Yoakke.SynKit.Parser.Combinator.Parser{``0,``4})">Seq&lt;TItem, T1, T2, T3, T4&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;, Combinator.Parser&lt;TItem, T4&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3, T4)&gt; Seq&lt;TItem, T1, T2, T3, T4&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3, Combinator.Parser&lt;TItem, T4&gt; p4)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T4&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3, T4&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The result type of the fourth parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__6_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%606(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%604%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%605%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L449">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__6_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``6(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3},Yoakke.SynKit.Parser.Combinator.Parser{``0,``4},Yoakke.SynKit.Parser.Combinator.Parser{``0,``5})">Seq&lt;TItem, T1, T2, T3, T4, T5&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;, Combinator.Parser&lt;TItem, T4&gt;, Combinator.Parser&lt;TItem, T5&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3, T4, T5)&gt; Seq&lt;TItem, T1, T2, T3, T4, T5&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3, Combinator.Parser&lt;TItem, T4&gt; p4, Combinator.Parser&lt;TItem, T5&gt; p5)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T4&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T5&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3, T4, T5&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The result type of the fourth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The result type of the fifth parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__7_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%607(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%604%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%605%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%606%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L476">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__7_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``7(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3},Yoakke.SynKit.Parser.Combinator.Parser{``0,``4},Yoakke.SynKit.Parser.Combinator.Parser{``0,``5},Yoakke.SynKit.Parser.Combinator.Parser{``0,``6})">Seq&lt;TItem, T1, T2, T3, T4, T5, T6&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;, Combinator.Parser&lt;TItem, T4&gt;, Combinator.Parser&lt;TItem, T5&gt;, Combinator.Parser&lt;TItem, T6&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3, T4, T5, T6)&gt; Seq&lt;TItem, T1, T2, T3, T4, T5, T6&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3, Combinator.Parser&lt;TItem, T4&gt; p4, Combinator.Parser&lt;TItem, T5&gt; p5, Combinator.Parser&lt;TItem, T6&gt; p6)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T4&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T5&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T6&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3, T4, T5, T6&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The result type of the fourth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The result type of the fifth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The result type of the sixth parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__8_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__Yoakke_SynKit_Parser_Combinator_Parser___0___7__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%608(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%604%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%605%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%606%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%607%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L506">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__8_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__Yoakke_SynKit_Parser_Combinator_Parser___0___7__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``8(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3},Yoakke.SynKit.Parser.Combinator.Parser{``0,``4},Yoakke.SynKit.Parser.Combinator.Parser{``0,``5},Yoakke.SynKit.Parser.Combinator.Parser{``0,``6},Yoakke.SynKit.Parser.Combinator.Parser{``0,``7})">Seq&lt;TItem, T1, T2, T3, T4, T5, T6, T7&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;, Combinator.Parser&lt;TItem, T4&gt;, Combinator.Parser&lt;TItem, T5&gt;, Combinator.Parser&lt;TItem, T6&gt;, Combinator.Parser&lt;TItem, T7&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3, T4, T5, T6, T7)&gt; Seq&lt;TItem, T1, T2, T3, T4, T5, T6, T7&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3, Combinator.Parser&lt;TItem, T4&gt; p4, Combinator.Parser&lt;TItem, T5&gt; p5, Combinator.Parser&lt;TItem, T6&gt; p6, Combinator.Parser&lt;TItem, T7&gt; p7)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T4&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T5&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T6&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T7&gt;</td>
+        <td><span class="parametername">p7</span></td>
+        <td><p>The seventh sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3, T4, T5, T6, T7&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The result type of the fourth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The result type of the fifth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The result type of the sixth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The result type of the seventh parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Seq__9_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__Yoakke_SynKit_Parser_Combinator_Parser___0___7__Yoakke_SynKit_Parser_Combinator_Parser___0___8__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Seq%60%609(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%602%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%603%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%604%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%605%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%606%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%607%7D%2CYoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%608%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L539">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Seq_" data-uid="Yoakke.SynKit.Parser.Combinator.Seq*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Seq__9_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__Yoakke_SynKit_Parser_Combinator_Parser___0___3__Yoakke_SynKit_Parser_Combinator_Parser___0___4__Yoakke_SynKit_Parser_Combinator_Parser___0___5__Yoakke_SynKit_Parser_Combinator_Parser___0___6__Yoakke_SynKit_Parser_Combinator_Parser___0___7__Yoakke_SynKit_Parser_Combinator_Parser___0___8__" data-uid="Yoakke.SynKit.Parser.Combinator.Seq``9(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Yoakke.SynKit.Parser.Combinator.Parser{``0,``2},Yoakke.SynKit.Parser.Combinator.Parser{``0,``3},Yoakke.SynKit.Parser.Combinator.Parser{``0,``4},Yoakke.SynKit.Parser.Combinator.Parser{``0,``5},Yoakke.SynKit.Parser.Combinator.Parser{``0,``6},Yoakke.SynKit.Parser.Combinator.Parser{``0,``7},Yoakke.SynKit.Parser.Combinator.Parser{``0,``8})">Seq&lt;TItem, T1, T2, T3, T4, T5, T6, T7, T8&gt;(Combinator.Parser&lt;TItem, T1&gt;, Combinator.Parser&lt;TItem, T2&gt;, Combinator.Parser&lt;TItem, T3&gt;, Combinator.Parser&lt;TItem, T4&gt;, Combinator.Parser&lt;TItem, T5&gt;, Combinator.Parser&lt;TItem, T6&gt;, Combinator.Parser&lt;TItem, T7&gt;, Combinator.Parser&lt;TItem, T8&gt;)</h4>
+  <div class="markdown level1 summary"><p>Utility for constructing arbitrary length sequences. See
+<a class="xref" href="Yoakke.SynKit.Parser.Combinator.html#Yoakke_SynKit_Parser_Combinator_Seq__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Yoakke_SynKit_Parser_Combinator_Parser___0___2__">Seq&lt;TItem, TLeftResult, TRightResult&gt;(Combinator.Parser&lt;TItem, TLeftResult&gt;, Combinator.Parser&lt;TItem, TRightResult&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, (T1, T2, T3, T4, T5, T6, T7, T8)&gt; Seq&lt;TItem, T1, T2, T3, T4, T5, T6, T7, T8&gt;(Combinator.Parser&lt;TItem, T1&gt; p1, Combinator.Parser&lt;TItem, T2&gt; p2, Combinator.Parser&lt;TItem, T3&gt; p3, Combinator.Parser&lt;TItem, T4&gt; p4, Combinator.Parser&lt;TItem, T5&gt; p5, Combinator.Parser&lt;TItem, T6&gt; p6, Combinator.Parser&lt;TItem, T7&gt; p7, Combinator.Parser&lt;TItem, T8&gt; p8)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T1&gt;</td>
+        <td><span class="parametername">p1</span></td>
+        <td><p>The first sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T2&gt;</td>
+        <td><span class="parametername">p2</span></td>
+        <td><p>The second sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T3&gt;</td>
+        <td><span class="parametername">p3</span></td>
+        <td><p>The third sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T4&gt;</td>
+        <td><span class="parametername">p4</span></td>
+        <td><p>The fourth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T5&gt;</td>
+        <td><span class="parametername">p5</span></td>
+        <td><p>The fifth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T6&gt;</td>
+        <td><span class="parametername">p6</span></td>
+        <td><p>The sixth sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T7&gt;</td>
+        <td><span class="parametername">p7</span></td>
+        <td><p>The seventh sequenced parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, T8&gt;</td>
+        <td><span class="parametername">p8</span></td>
+        <td><p>The eight sequenced parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, <span class="xref">System.ValueTuple</span>&lt;T1, T2, T3, T4, T5, T6, T7, <span class="xref">System.ValueTuple</span>&lt;T8&gt;&gt;&gt;</td>
+        <td><p>The combined sequential parsers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The result type of the first parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The result type of the second parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The result type of the third parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td><p>The result type of the fourth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td><p>The result type of the fifth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td><p>The result type of the sixth parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td><p>The result type of the seventh parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td><p>The result type of the eight parser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Text_System_String_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Text(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L89">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Text_" data-uid="Yoakke.SynKit.Parser.Combinator.Text*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Text_System_String_" data-uid="Yoakke.SynKit.Parser.Combinator.Text(System.String)">Text(String)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser, that takes a single token, if its text matches the specified one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;IToken, IToken&gt; Text(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;<a class="xref" href="Yoakke.SynKit.Lexer.IToken.html">IToken</a>, <a class="xref" href="Yoakke.SynKit.Lexer.IToken.html">IToken</a>&gt;</td>
+        <td><p>A new parser, that tries to match a token with text <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator_Transform__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Func___1___2__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator.Transform%60%603(Yoakke.SynKit.Parser.Combinator.Parser%7B%60%600%2C%60%601%7D%2CFunc%7B%60%601%2C%60%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L234">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Parser_Combinator_Transform_" data-uid="Yoakke.SynKit.Parser.Combinator.Transform*"></a>
+  <h4 id="Yoakke_SynKit_Parser_Combinator_Transform__3_Yoakke_SynKit_Parser_Combinator_Parser___0___1__Func___1___2__" data-uid="Yoakke.SynKit.Parser.Combinator.Transform``3(Yoakke.SynKit.Parser.Combinator.Parser{``0,``1},Func{``1,``2})">Transform&lt;TItem, TParsed, TResult&gt;(Combinator.Parser&lt;TItem, TParsed&gt;, Func&lt;TParsed, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a parser that trasforms the result, in case the subelement parser succeeds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Combinator.Parser&lt;TItem, TResult&gt; Transform&lt;TItem, TParsed, TResult&gt;(Combinator.Parser&lt;TItem, TParsed&gt; element, Func&lt;TParsed, TResult&gt; transformer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TParsed&gt;</td>
+        <td><span class="parametername">element</span></td>
+        <td><p>The element parser.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;TParsed, TResult&gt;</td>
+        <td><span class="parametername">transformer</span></td>
+        <td><p>The transformer function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Parser.Combinator.Parser-2.html">Combinator.Parser</a>&lt;TItem, TResult&gt;</td>
+        <td><p>A new parser that invokes the <code data-dev-comment-type="paramref" class="paramref">element</code> parsed, and transforms the result, if it
+succeeds, using <code data-dev-comment-type="paramref" class="paramref">transformer</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TParsed</span></td>
+        <td><p>The parsed value type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>The transformed value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Parser_Combinator.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Parser.Combinator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Parser/Combinator.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

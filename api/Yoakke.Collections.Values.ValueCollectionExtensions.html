@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ValueCollectionExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ValueCollectionExtensions
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions">
+  
+  
+  <h1 id="Yoakke_Collections_Values_ValueCollectionExtensions" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions" class="text-break">Class ValueCollectionExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods for value-based equality collection creations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ValueCollectionExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.Collections.Values.html">Yoakke.Collections.Values</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.Collections.dll</h6>
+  <h5 id="Yoakke_Collections_Values_ValueCollectionExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ValueCollectionExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__1_IReadOnlyList___0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%601(IReadOnlyList%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L23">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__1_IReadOnlyList___0__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``1(IReadOnlyList{``0})">ToValue&lt;T&gt;(IReadOnlyList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <see cref="!:IReadOnlyList&lt;T>"></see> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueList&lt;T&gt; ToValue&lt;T&gt;(this IReadOnlyList&lt;T&gt; list)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td><p>The <see cref="!:IReadOnlyList&lt;T>"></see> to wrap.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueList-1.html">IReadOnlyValueList</a>&lt;T&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">list</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueList-1.html">IReadOnlyValueList&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__1_IReadOnlyList___0__IEqualityComparer___0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%601(IReadOnlyList%7B%60%600%7D%2CIEqualityComparer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L33">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__1_IReadOnlyList___0__IEqualityComparer___0__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``1(IReadOnlyList{``0},IEqualityComparer{``0})">ToValue&lt;T&gt;(IReadOnlyList&lt;T&gt;, IEqualityComparer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <see cref="!:IReadOnlyList&lt;T>"></see> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueList&lt;T&gt; ToValue&lt;T&gt;(this IReadOnlyList&lt;T&gt; list, IEqualityComparer&lt;T&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td><p>The <see cref="!:IReadOnlyList&lt;T>"></see> to wrap.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;T&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueList-1.html">IReadOnlyValueList</a>&lt;T&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">list</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueList-1.html">IReadOnlyValueList&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The element type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%602(IReadOnlyDictionary%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L47">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``2(IReadOnlyDictionary{``0,``1})">ToValue&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueDictionary&lt;TKey, TValue&gt; ToValue&lt;TKey, TValue&gt;(this IReadOnlyDictionary&lt;TKey, TValue&gt; dictionary)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td><p>The <see cref="!:IReadOnlyDictionary&lt;TKey, TValue>"></see> to wrap.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">dictionary</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%602(IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2CIEqualityComparer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L58">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___0__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``2(IReadOnlyDictionary{``0,``1},IEqualityComparer{``0})">ToValue&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;, IEqualityComparer&lt;TKey&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueDictionary&lt;TKey, TValue&gt; ToValue&lt;TKey, TValue&gt;(this IReadOnlyDictionary&lt;TKey, TValue&gt; dictionary, IEqualityComparer&lt;TKey&gt; keyComparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td><p>The <see cref="!:IReadOnlyDictionary&lt;TKey, TValue>"></see> to wrap.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">keyComparer</span></td>
+        <td><p>The key comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">dictionary</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___0__IEqualityComparer___1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%602(IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2CIEqualityComparer%7B%60%600%7D%2CIEqualityComparer%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L85">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___0__IEqualityComparer___1__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``2(IReadOnlyDictionary{``0,``1},IEqualityComparer{``0},IEqualityComparer{``1})">ToValue&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;, IEqualityComparer&lt;TKey&gt;, IEqualityComparer&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueDictionary&lt;TKey, TValue&gt; ToValue&lt;TKey, TValue&gt;(this IReadOnlyDictionary&lt;TKey, TValue&gt; dictionary, IEqualityComparer&lt;TKey&gt; keyComparer, IEqualityComparer&lt;TValue&gt; valueComparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td><p>The <see cref="!:IReadOnlyDictionary&lt;TKey, TValue>"></see> to wrap.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TKey&gt;</td>
+        <td><span class="parametername">keyComparer</span></td>
+        <td><p>The key comparer to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">valueComparer</span></td>
+        <td><p>The value comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">dictionary</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___1__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions.ToValue%60%602(IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2CIEqualityComparer%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L71">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue_" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue*"></a>
+  <h4 id="Yoakke_Collections_Values_ValueCollectionExtensions_ToValue__2_IReadOnlyDictionary___0___1__IEqualityComparer___1__" data-uid="Yoakke.Collections.Values.ValueCollectionExtensions.ToValue``2(IReadOnlyDictionary{``0,``1},IEqualityComparer{``1})">ToValue&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;, IEqualityComparer&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Wraps an <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a> to have value-based equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyValueDictionary&lt;TKey, TValue&gt; ToValue&lt;TKey, TValue&gt;(this IReadOnlyDictionary&lt;TKey, TValue&gt; dictionary, IEqualityComparer&lt;TValue&gt; valueComparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
+        <td><span class="parametername">dictionary</span></td>
+        <td><p>The <see cref="!:IReadOnlyDictionary&lt;TKey, TValue>"></see> to wrap.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TValue&gt;</td>
+        <td><span class="parametername">valueComparer</span></td>
+        <td><p>The value comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">dictionary</code> wrapped as <a class="xref" href="Yoakke.Collections.Values.IReadOnlyValueDictionary-2.html">IReadOnlyValueDictionary&lt;TKey, TValue&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>The key type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Values_ValueCollectionExtensions.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Values.ValueCollectionExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Values/ValueCollectionExtensions.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

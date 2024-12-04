@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPreProcessor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPreProcessor
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor">
+  
+  
+  <h1 id="Yoakke_SynKit_C_Syntax_IPreProcessor" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor" class="text-break">Interface IPreProcessor
+  </h1>
+  <div class="markdown level0 summary"><p>The interface of how all C pre-processors should work.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SynKit.C.Syntax.html">Yoakke.SynKit.C.Syntax</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.C.Syntax.dll</h6>
+  <h5 id="Yoakke_SynKit_C_Syntax_IPreProcessor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPreProcessor</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_Macros.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.Macros%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L17">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_Macros_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Macros*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_Macros" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Macros">Macros</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a>s defined in this <a class="xref" href="Yoakke.SynKit.C.Syntax.IPreProcessor.html">IPreProcessor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;string, IMacro&gt; Macros { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyDictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_Define_Yoakke_SynKit_C_Syntax_IMacro_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.Define(Yoakke.SynKit.C.Syntax.IMacro)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L25">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_Define_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Define*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_Define_Yoakke_SynKit_C_Syntax_IMacro_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Define(Yoakke.SynKit.C.Syntax.IMacro)">Define(IMacro)</h4>
+  <div class="markdown level1 summary"><p>Defines the given <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> for usage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IMacro Define(IMacro macro)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a></td>
+        <td><span class="parametername">macro</span></td>
+        <td><p>The <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> to define.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a></td>
+        <td><p>The <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> the newly added overwrote because of name collision,
+or null if it overrode nothing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_Expand_IEnumerable_Yoakke_SynKit_C_Syntax_CToken__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.Expand(IEnumerable%7BYoakke.SynKit.C.Syntax.CToken%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L52">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_Expand_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Expand*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_Expand_IEnumerable_Yoakke_SynKit_C_Syntax_CToken__" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Expand(IEnumerable{Yoakke.SynKit.C.Syntax.CToken})">Expand(IEnumerable&lt;CToken&gt;)</h4>
+  <div class="markdown level1 summary"><p>Expands the given sequence of <a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>s a single time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;CToken&gt; Expand(IEnumerable&lt;CToken&gt; tokens)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>&gt;</td>
+        <td><span class="parametername">tokens</span></td>
+        <td><p>The sequence of <a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>s to expand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>&gt;</td>
+        <td><p>The expanded sequence of <a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>s.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_IsDefined_System_String_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.IsDefined(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L39">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_IsDefined_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.IsDefined*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_IsDefined_System_String_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.IsDefined(System.String)">IsDefined(String)</h4>
+  <div class="markdown level1 summary"><p>Checks if an <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> is defined with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsDefined(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> to search for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if an <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> with name <code data-dev-comment-type="paramref" class="paramref">name</code> is defined.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_Next.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.Next%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L45">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_Next_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Next*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_Next" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Next">Next()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the next <a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a> from the pre-processor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CToken Next()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a></td>
+        <td><p>The next upcoming <a class="xref" href="Yoakke.SynKit.C.Syntax.CToken.html">CToken</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor_Undefine_System_String_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor.Undefine(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L32">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_C_Syntax_IPreProcessor_Undefine_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Undefine*"></a>
+  <h4 id="Yoakke_SynKit_C_Syntax_IPreProcessor_Undefine_System_String_" data-uid="Yoakke.SynKit.C.Syntax.IPreProcessor.Undefine(System.String)">Undefine(String)</h4>
+  <div class="markdown level1 summary"><p>Undefines an <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IMacro Undefine(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a> to undefine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a></td>
+        <td><p>The undefined <a class="xref" href="Yoakke.SynKit.C.Syntax.IMacro.html">IMacro</a>, or null if there was none defined with this name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.C.Syntax.PreProcessorExtensions.html#Yoakke_SynKit_C_Syntax_PreProcessorExtensions_Define_Yoakke_SynKit_C_Syntax_IPreProcessor_Func_Yoakke_SynKit_C_Syntax_IPreProcessor_Yoakke_SynKit_C_Syntax_IMacro__">PreProcessorExtensions.Define(IPreProcessor, Func&lt;IPreProcessor, IMacro&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.C.Syntax.PreProcessorExtensions.html#Yoakke_SynKit_C_Syntax_PreProcessorExtensions_Define__1_Yoakke_SynKit_C_Syntax_IPreProcessor_">PreProcessorExtensions.Define&lt;TMacro&gt;(IPreProcessor)</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.C.Syntax.PreProcessorExtensions.html#Yoakke_SynKit_C_Syntax_PreProcessorExtensions_DefineCounter_Yoakke_SynKit_C_Syntax_IPreProcessor_">PreProcessorExtensions.DefineCounter(IPreProcessor)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_C_Syntax_IPreProcessor.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.C.Syntax.IPreProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/C.Syntax/IPreProcessor.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

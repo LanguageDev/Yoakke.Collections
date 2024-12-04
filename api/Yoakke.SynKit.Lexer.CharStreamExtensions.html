@@ -1,0 +1,713 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CharStreamExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CharStreamExtensions
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions">
+  
+  
+  <h1 id="Yoakke_SynKit_Lexer_CharStreamExtensions" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions" class="text-break">Class CharStreamExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extensions for <a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CharStreamExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SynKit.Lexer.html">Yoakke.SynKit.Lexer</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.Lexer.dll</h6>
+  <h5 id="Yoakke_SynKit_Lexer_CharStreamExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class CharStreamExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_Yoakke_SynKit_Lexer_ICharStream_System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L82">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_Yoakke_SynKit_Lexer_ICharStream_System_Int32_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText(Yoakke.SynKit.Lexer.ICharStream,System.Int32)">ConsumeText(ICharStream, Int32)</h4>
+  <div class="markdown level1 summary"><p>Consumes characters in the input and builds a string from the consumed characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ConsumeText(this ICharStream stream, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to consume characters in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The amount of characters to skip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The concatenated characters as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_Yoakke_SynKit_Lexer_ICharStream_System_Int32_Yoakke_SynKit_Text_Range__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Int32%2CYoakke.SynKit.Text.Range%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L91">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeText_Yoakke_SynKit_Lexer_ICharStream_System_Int32_Yoakke_SynKit_Text_Range__" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeText(Yoakke.SynKit.Lexer.ICharStream,System.Int32,Yoakke.SynKit.Text.Range@)">ConsumeText(ICharStream, Int32, out Range)</h4>
+  <div class="markdown level1 summary"><p>Consumes characters in the input and builds a string from the consumed characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ConsumeText(this ICharStream stream, int length, out Range range)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to consume characters in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The amount of characters to skip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Yoakke.SynKit.Text.Range</span></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>The range of the text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The concatenated characters as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken__1_Yoakke_SynKit_Lexer_ICharStream___0_System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken%60%601(Yoakke.SynKit.Lexer.ICharStream%2C%60%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L129">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken__1_Yoakke_SynKit_Lexer_ICharStream___0_System_Int32_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken``1(Yoakke.SynKit.Lexer.ICharStream,``0,System.Int32)">ConsumeToken&lt;TKind&gt;(ICharStream, TKind, Int32)</h4>
+  <div class="markdown level1 summary"><p>Consumes characters in the input and builds a <see cref="!:Token&lt;TKind>"></see> from the skipped characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Token&lt;TKind&gt; ConsumeToken&lt;TKind&gt;(this ICharStream stream, TKind kind, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to consume characters in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TKind</span></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The token-kind to build.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The amount of characters to skip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Token</span>&lt;TKind&gt;</td>
+        <td><p>The constructed <see cref="!:Token&lt;TKind>"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKind</span></td>
+        <td><p>The kind-type for the produced <see cref="!:Token&lt;TKind>"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken__1_Yoakke_SynKit_Lexer_ICharStream_System_Int32_Func_Yoakke_SynKit_Text_Location_System_String___0__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken%60%601(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Int32%2CFunc%7BYoakke.SynKit.Text.Location%2CSystem.String%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L113">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_ConsumeToken__1_Yoakke_SynKit_Lexer_ICharStream_System_Int32_Func_Yoakke_SynKit_Text_Location_System_String___0__" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.ConsumeToken``1(Yoakke.SynKit.Lexer.ICharStream,System.Int32,Func{Yoakke.SynKit.Text.Location,System.String,``0})">ConsumeToken&lt;TToken&gt;(ICharStream, Int32, Func&lt;Location, String, TToken&gt;)</h4>
+  <div class="markdown level1 summary"><p>Consumes characters in the input and builds a <a class="xref" href="Yoakke.SynKit.Lexer.IToken-1.html">IToken&lt;TKind&gt;</a> with a given factory function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TToken ConsumeToken&lt;TToken&gt;(this ICharStream stream, int length, Func&lt;Location, string, TToken&gt; makeToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to consume characters in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td><p>The amount of characters to skip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Yoakke.SynKit.Text.Location</span>, <span class="xref">System.String</span>, TToken&gt;</td>
+        <td><span class="parametername">makeToken</span></td>
+        <td><p>The factory function that receives the source <span class="xref">Yoakke.SynKit.Text.Range</span> of the skipped characters
+and the skipped characters themselves concatenated as a string, and produces an <a class="xref" href="Yoakke.SynKit.Lexer.IToken.html">IToken</a> from them.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TToken</span></td>
+        <td><p>The constructed <a class="xref" href="Yoakke.SynKit.Lexer.IToken-1.html">IToken&lt;TKind&gt;</a> returned from <code data-dev-comment-type="paramref" class="paramref">makeToken</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TToken</span></td>
+        <td><p>The exact type of the constructed <a class="xref" href="Yoakke.SynKit.Lexer.IToken.html">IToken</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_LookAhead_Yoakke_SynKit_Lexer_ICharStream_System_Int32_System_Char_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.LookAhead(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Int32%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L32">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_LookAhead_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.LookAhead*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_LookAhead_Yoakke_SynKit_Lexer_ICharStream_System_Int32_System_Char_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.LookAhead(Yoakke.SynKit.Lexer.ICharStream,System.Int32,System.Char)">LookAhead(ICharStream, Int32, Char)</h4>
+  <div class="markdown level1 summary"><p>Peeks ahead some characters into the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char LookAhead(this ICharStream stream, int offset, char default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to peek.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The amount to peek forward. 0 means next character.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">default</span></td>
+        <td><p>The default character to return if the end has been reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><p>The peeked character, or default if the end has been reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_ReadOnlySpan_System_Char__System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream%2CReadOnlySpan%7BSystem.Char%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L52">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_ReadOnlySpan_System_Char__System_Int32_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream,ReadOnlySpan{System.Char},System.Int32)">Matches(ICharStream, ReadOnlySpan&lt;Char&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks, if some upcoming text matches a given string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Matches(this ICharStream stream, ReadOnlySpan&lt;char&gt; text, int offset = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to check the match for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to compare with the upcoming text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset to start the match at in the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if there is a full match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L73">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_System_Char_System_Int32_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream,System.Char,System.Int32)">Matches(ICharStream, Char, Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks, if some upcoming character matches a given one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Matches(this ICharStream stream, char ch, int offset = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to check the match for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">ch</span></td>
+        <td><p>The character to compare with the upcoming one.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset to start look for match at in the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if they match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L42">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_Matches_Yoakke_SynKit_Lexer_ICharStream_System_String_System_Int32_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Matches(Yoakke.SynKit.Lexer.ICharStream,System.String,System.Int32)">Matches(ICharStream, String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Checks, if some upcoming text matches a given string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Matches(this ICharStream stream, string text, int offset = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to check the match for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The string to compare with the upcoming text.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset to start the match at in the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if there is a full match.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions_Peek_Yoakke_SynKit_Lexer_ICharStream_System_Char_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions.Peek(Yoakke.SynKit.Lexer.ICharStream%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L22">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Lexer_CharStreamExtensions_Peek_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Peek*"></a>
+  <h4 id="Yoakke_SynKit_Lexer_CharStreamExtensions_Peek_Yoakke_SynKit_Lexer_ICharStream_System_Char_" data-uid="Yoakke.SynKit.Lexer.CharStreamExtensions.Peek(Yoakke.SynKit.Lexer.ICharStream,System.Char)">Peek(ICharStream, Char)</h4>
+  <div class="markdown level1 summary"><p>Peeks ahead a character into the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char Peek(this ICharStream stream, char default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.SynKit.Lexer.ICharStream.html">ICharStream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to peek.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">default</span></td>
+        <td><p>The default character to return if the end has been reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><p>The peeked character, or default if the end has been reached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Lexer_CharStreamExtensions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Lexer.CharStreamExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Lexer/CharStreamExtensions.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

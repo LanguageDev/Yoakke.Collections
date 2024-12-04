@@ -1,0 +1,1175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Nfa&lt;TState, TSymbol&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Nfa&lt;TState, TSymbol&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2">
+  
+  
+  <h1 id="Yoakke_SynKit_Automata_Sparse_Nfa_2" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2" class="text-break">Class Nfa&lt;TState, TSymbol&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A generic sparse NFA implementation.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Nfa&lt;TState, TSymbol&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.Sparse.ISparseNfa-2.html">ISparseNfa</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.INfa-2.html">INfa</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.Sparse.IReadOnlySparseNfa-2.html">IReadOnlySparseNfa</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyNfa-2.html">IReadOnlyNfa</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.Sparse.ISparseFiniteAutomaton-2.html">ISparseFiniteAutomaton</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.Sparse.IReadOnlySparseFiniteAutomaton-2.html">IReadOnlySparseFiniteAutomaton</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.IFiniteAutomaton-2.html">IFiniteAutomaton</a>&lt;TState, TSymbol&gt;</div>
+    <div><a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html">IReadOnlyFiniteAutomaton</a>&lt;TState, TSymbol&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.SynKit.Automata.Sparse.html">Yoakke.SynKit.Automata.Sparse</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.SynKit.Automata.dll</h6>
+  <h5 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Nfa&lt;TState, TSymbol&gt; : object, ISparseNfa&lt;TState, TSymbol&gt;, INfa&lt;TState, TSymbol&gt;, IReadOnlySparseNfa&lt;TState, TSymbol&gt;, IReadOnlyNfa&lt;TState, TSymbol&gt;, ISparseFiniteAutomaton&lt;TState, TSymbol&gt;, IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;, IFiniteAutomaton&lt;TState, TSymbol&gt;, IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TState</span></td>
+        <td><p>The state type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSymbol</span></td>
+        <td><p>The symbol type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L243">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.#ctor*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.#ctor">Nfa()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.SynKit.Automata.Sparse.Nfa-2.html">Nfa&lt;TState, TSymbol&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Nfa()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor_IEqualityComparer__0__IEqualityComparer__1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.%23ctor(IEqualityComparer%7B%600%7D%2CIEqualityComparer%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L253">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.#ctor*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2__ctor_IEqualityComparer__0__IEqualityComparer__1__" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.#ctor(IEqualityComparer{`0},IEqualityComparer{`1})">Nfa(IEqualityComparer&lt;TState&gt;, IEqualityComparer&lt;TSymbol&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.SynKit.Automata.Sparse.Nfa-2.html">Nfa&lt;TState, TSymbol&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Nfa(IEqualityComparer&lt;TState&gt; stateComparer, IEqualityComparer&lt;TSymbol&gt; symbolComparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TState&gt;</td>
+        <td><span class="parametername">stateComparer</span></td>
+        <td><p>The state comparer to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TSymbol&gt;</td>
+        <td><span class="parametername">symbolComparer</span></td>
+        <td><p>The symbol comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_AcceptingStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.AcceptingStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L170">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AcceptingStates_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AcceptingStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AcceptingStates" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AcceptingStates">AcceptingStates</h4>
+  <div class="markdown level1 summary"><p>The accepting states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TState&gt; AcceptingStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Alphabet.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Alphabet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L194">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Alphabet_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Alphabet*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Alphabet" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Alphabet">Alphabet</h4>
+  <div class="markdown level1 summary"><p>The alphabet of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TSymbol&gt; Alphabet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;TSymbol&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonTransitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.EpsilonTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L188">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonTransitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EpsilonTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonTransitions" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EpsilonTransitions">EpsilonTransitions</h4>
+  <div class="markdown level1 summary"><p>The epsilon transitions of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;EpsilonTransition&lt;TState&gt;&gt; EpsilonTransitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;<span class="xref">Yoakke.SynKit.Automata.EpsilonTransition</span>&lt;TState&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_InitialStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.InitialStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L164">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_InitialStates_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.InitialStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_InitialStates" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.InitialStates">InitialStates</h4>
+  <div class="markdown level1 summary"><p>The initial states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TState&gt; InitialStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_ReachableStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.ReachableStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L208">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_ReachableStates_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.ReachableStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_ReachableStates" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.ReachableStates">ReachableStates</h4>
+  <div class="markdown level1 summary"><p>Finds all the reachable states from the initial state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TState&gt; ReachableStates { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_StateComparer.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.StateComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L200">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_StateComparer_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.StateComparer*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_StateComparer" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.StateComparer">StateComparer</h4>
+  <div class="markdown level1 summary"><p>The state comparer used by the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEqualityComparer&lt;TState&gt; StateComparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_States.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.States%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L176">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_States_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.States*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_States" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.States">States</h4>
+  <div class="markdown level1 summary"><p>All states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;TState&gt; States { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_SymbolComparer.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.SymbolComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L205">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_SymbolComparer_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.SymbolComparer*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_SymbolComparer" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.SymbolComparer">SymbolComparer</h4>
+  <div class="markdown level1 summary"><p>The comparer used for alphabet symbols.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEqualityComparer&lt;TSymbol&gt; SymbolComparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEqualityComparer</span>&lt;TSymbol&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Transitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Transitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L182">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Transitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Transitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Transitions" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Transitions">Transitions</h4>
+  <div class="markdown level1 summary"><p>The transitions of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;Transition&lt;TState, TSymbol&gt;&gt; Transitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ICollection</span>&lt;<span class="xref">Yoakke.SynKit.Automata.Transition</span>&lt;TState, TSymbol&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Accepts_IEnumerable__1__.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Accepts(IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L343">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Accepts_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Accepts*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Accepts_IEnumerable__1__" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Accepts(IEnumerable{`1})">Accepts(IEnumerable&lt;TSymbol&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks if this automaton results in an accepting state for the given input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Accepts(IEnumerable&lt;TSymbol&gt; input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TSymbol&gt;</td>
+        <td><span class="parametername">input</span></td>
+        <td><p>The sequence of input to feed in for the automaton.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the automaton accepts the input, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_AddEpsilonTransition__0__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.AddEpsilonTransition(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L368">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AddEpsilonTransition_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AddEpsilonTransition*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AddEpsilonTransition__0__0_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AddEpsilonTransition(`0,`0)">AddEpsilonTransition(TState, TState)</h4>
+  <div class="markdown level1 summary"><p>Adds an epsilon transition to this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEpsilonTransition(TState from, TState to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The state to transition to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_AddTransition__0__1__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.AddTransition(%600%2C%601%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L362">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AddTransition_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AddTransition*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_AddTransition__0__1__0_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.AddTransition(`0,`1,`0)">AddTransition(TState, TSymbol, TState)</h4>
+  <div class="markdown level1 summary"><p>Adds a transition to this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTransition(TState from, TSymbol on, TState to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSymbol</span></td>
+        <td><span class="parametername">on</span></td>
+        <td><p>The symbol that triggers this transition.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The state to transition to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_EliminateEpsilonTransitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.EliminateEpsilonTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L385">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EliminateEpsilonTransitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EliminateEpsilonTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EliminateEpsilonTransitions" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EliminateEpsilonTransitions">EliminateEpsilonTransitions()</h4>
+  <div class="markdown level1 summary"><p>Eliminates the epsilon-transitions from this NFA, keeping it equivalent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EliminateEpsilonTransitions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if there were epsilon transitions to eliminate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonClosure__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.EpsilonClosure(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L374">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonClosure_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EpsilonClosure*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_EpsilonClosure__0_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.EpsilonClosure(`0)">EpsilonClosure(TState)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the epsilon-closure of a given state, which is all the states reachable with only
+epsilon transitions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TState&gt; EpsilonClosure(TState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state to calculate the epsilon-closure for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TState&gt;</td>
+        <td><p>The states of the epsilon-closure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_GetTransitions__0__1_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.GetTransitions(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L346">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_GetTransitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.GetTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_GetTransitions__0__1_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.GetTransitions(`0,`1)">GetTransitions(TState, TSymbol)</h4>
+  <div class="markdown level1 summary"><p>Gets all transitions that are valid from a state on an input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TState&gt; GetTransitions(TState from, TSymbol on)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSymbol</span></td>
+        <td><span class="parametername">on</span></td>
+        <td><p>The symbol to transition on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TState&gt;</td>
+        <td><p>The set of states that are valid from the starting set on the input.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveEpsilonTransition__0__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.RemoveEpsilonTransition(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L371">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveEpsilonTransition_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveEpsilonTransition*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveEpsilonTransition__0__0_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveEpsilonTransition(`0,`0)">RemoveEpsilonTransition(TState, TState)</h4>
+  <div class="markdown level1 summary"><p>Removes an epsilon transition from this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveEpsilonTransition(TState from, TState to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The state to transition to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the transition was found and successfully removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveTransition__0__1__0_.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.RemoveTransition(%600%2C%601%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L365">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveTransition_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveTransition*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveTransition__0__1__0_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveTransition(`0,`1,`0)">RemoveTransition(TState, TSymbol, TState)</h4>
+  <div class="markdown level1 summary"><p>Removes a transition from this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveTransition(TState from, TSymbol on, TState to)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The state to transition from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSymbol</span></td>
+        <td><span class="parametername">on</span></td>
+        <td><p>The symbol that triggers this transition.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TState</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The state to transition to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the transition was found and removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveUnreachable.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.RemoveUnreachable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L382">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveUnreachable_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveUnreachable*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_RemoveUnreachable" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.RemoveUnreachable">RemoveUnreachable()</h4>
+  <div class="markdown level1 summary"><p>Removes states and transitions from the automaton that are not reachable from the initial state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveUnreachable()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if there were unreachable states, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_ToDot.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.ToDot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L302">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_ToDot_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.ToDot*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_ToDot" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.ToDot">ToDot()</h4>
+  <div class="markdown level1 summary"><p>Creates a Graphviz DOT code representation of this automaton for visualization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToDot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The full graphviz code.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__AcceptingStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23IReadOnlyFiniteAutomaton%7BTState%2CTSymbol%7D%23AcceptingStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L173">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__AcceptingStates_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyFiniteAutomaton{TState,TSymbol}#AcceptingStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__AcceptingStates" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyFiniteAutomaton{TState,TSymbol}#AcceptingStates">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.AcceptingStates</h4>
+  <div class="markdown level1 summary"><p>The accepting states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;TState&gt; IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.AcceptingStates { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__States.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23IReadOnlyFiniteAutomaton%7BTState%2CTSymbol%7D%23States%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L179">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__States_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyFiniteAutomaton{TState,TSymbol}#States*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyFiniteAutomaton_TState_TSymbol__States" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyFiniteAutomaton{TState,TSymbol}#States">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.States</h4>
+  <div class="markdown level1 summary"><p>All states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;TState&gt; IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;.States { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__EpsilonTransitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23IReadOnlyNfa%7BTState%2CTSymbol%7D%23EpsilonTransitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L191">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__EpsilonTransitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyNfa{TState,TSymbol}#EpsilonTransitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__EpsilonTransitions" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyNfa{TState,TSymbol}#EpsilonTransitions">IReadOnlyNfa&lt;TState, TSymbol&gt;.EpsilonTransitions</h4>
+  <div class="markdown level1 summary"><p>The epsilon transitions of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;EpsilonTransition&lt;TState&gt;&gt; IReadOnlyNfa&lt;TState, TSymbol&gt;.EpsilonTransitions { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<span class="xref">Yoakke.SynKit.Automata.EpsilonTransition</span>&lt;TState&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__InitialStates.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23IReadOnlyNfa%7BTState%2CTSymbol%7D%23InitialStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L167">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__InitialStates_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyNfa{TState,TSymbol}#InitialStates*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_IReadOnlyNfa_TState_TSymbol__InitialStates" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#IReadOnlyNfa{TState,TSymbol}#InitialStates">IReadOnlyNfa&lt;TState, TSymbol&gt;.InitialStates</h4>
+  <div class="markdown level1 summary"><p>The initial states of the automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;TState&gt; IReadOnlyNfa&lt;TState, TSymbol&gt;.InitialStates { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;TState&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Alphabet.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23Sparse%23IReadOnlySparseFiniteAutomaton%7BTState%2CTSymbol%7D%23Alphabet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L197">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Alphabet_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#Sparse#IReadOnlySparseFiniteAutomaton{TState,TSymbol}#Alphabet*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Alphabet" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#Sparse#IReadOnlySparseFiniteAutomaton{TState,TSymbol}#Alphabet">IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;.Alphabet</h4>
+  <div class="markdown level1 summary"><p>The alphabet of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;TSymbol&gt; IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;.Alphabet { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;TSymbol&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Transitions.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602.Yoakke%23SynKit%23Automata%23Sparse%23IReadOnlySparseFiniteAutomaton%7BTState%2CTSymbol%7D%23Transitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L185">View Source</a>
+  </span>
+  <a id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Transitions_" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#Sparse#IReadOnlySparseFiniteAutomaton{TState,TSymbol}#Transitions*"></a>
+  <h4 id="Yoakke_SynKit_Automata_Sparse_Nfa_2_Yoakke_SynKit_Automata_Sparse_IReadOnlySparseFiniteAutomaton_TState_TSymbol__Transitions" data-uid="Yoakke.SynKit.Automata.Sparse.Nfa`2.Yoakke#SynKit#Automata#Sparse#IReadOnlySparseFiniteAutomaton{TState,TSymbol}#Transitions">IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;.Transitions</h4>
+  <div class="markdown level1 summary"><p>The transitions of this automaton.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;Transition&lt;TState, TSymbol&gt;&gt; IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;.Transitions { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IReadOnlyCollection</span>&lt;<span class="xref">Yoakke.SynKit.Automata.Transition</span>&lt;TState, TSymbol&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.Sparse.ISparseNfa-2.html">ISparseNfa&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.INfa-2.html">INfa&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.Sparse.IReadOnlySparseNfa-2.html">IReadOnlySparseNfa&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyNfa-2.html">IReadOnlyNfa&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.Sparse.ISparseFiniteAutomaton-2.html">ISparseFiniteAutomaton&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.Sparse.IReadOnlySparseFiniteAutomaton-2.html">IReadOnlySparseFiniteAutomaton&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IFiniteAutomaton-2.html">IFiniteAutomaton&lt;TState, TSymbol&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.SynKit.Automata.IReadOnlyFiniteAutomaton-2.html">IReadOnlyFiniteAutomaton&lt;TState, TSymbol&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_SynKit_Automata_Sparse_Nfa_2.md&amp;value=---%0Auid%3A%20Yoakke.SynKit.Automata.Sparse.Nfa%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/SynKit/Libraries/Automata/Sparse/Nfa.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

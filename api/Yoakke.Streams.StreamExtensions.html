@@ -1,0 +1,616 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StreamExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StreamExtensions
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.Streams.StreamExtensions">
+  
+  
+  <h1 id="Yoakke_Streams_StreamExtensions" data-uid="Yoakke.Streams.StreamExtensions" class="text-break">Class StreamExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extensions for stream objects.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StreamExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.Streams.html">Yoakke.Streams</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.Streams.dll</h6>
+  <h5 id="Yoakke_Streams_StreamExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class StreamExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_Consume__1_Yoakke_Streams_IStream___0__.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.Consume%60%601(Yoakke.Streams.IStream%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L57">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_Consume_" data-uid="Yoakke.Streams.StreamExtensions.Consume*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_Consume__1_Yoakke_Streams_IStream___0__" data-uid="Yoakke.Streams.StreamExtensions.Consume``1(Yoakke.Streams.IStream{``0})">Consume&lt;TItem&gt;(IStream&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Consumes the upcoming item in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TItem Consume&lt;TItem&gt;(this IStream&lt;TItem&gt; stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <a class="xref" href="Yoakke.Streams.IStream-1.html">IStream&lt;T&gt;</a> to peek in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TItem</span></td>
+        <td><p>The consumed item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_Consume__1_Yoakke_Streams_IStream___0__System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.Consume%60%601(Yoakke.Streams.IStream%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L68">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_Consume_" data-uid="Yoakke.Streams.StreamExtensions.Consume*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_Consume__1_Yoakke_Streams_IStream___0__System_Int32_" data-uid="Yoakke.Streams.StreamExtensions.Consume``1(Yoakke.Streams.IStream{``0},System.Int32)">Consume&lt;TItem&gt;(IStream&lt;TItem&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>A default implementation for <a class="xref" href="Yoakke.Streams.IStream-1.html#Yoakke_Streams_IStream_1_Consume_System_Int32_">Consume(Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Consume&lt;TItem&gt;(IStream&lt;TItem&gt; stream, int amount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to consume from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>The amount to consume.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The amount that was actually consumed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_Filter__1_Yoakke_Streams_IStream___0__Predicate___0__.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.Filter%60%601(Yoakke.Streams.IStream%7B%60%600%7D%2CPredicate%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L44">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_Filter_" data-uid="Yoakke.Streams.StreamExtensions.Filter*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_Filter__1_Yoakke_Streams_IStream___0__Predicate___0__" data-uid="Yoakke.Streams.StreamExtensions.Filter``1(Yoakke.Streams.IStream{``0},Predicate{``0})">Filter&lt;TItem&gt;(IStream&lt;TItem&gt;, Predicate&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Filters a stream using a predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IStream&lt;TItem&gt; Filter&lt;TItem&gt;(this IStream&lt;TItem&gt; stream, Predicate&lt;TItem&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to filter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Predicate</span>&lt;TItem&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>The predicate to use for filtering.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">stream</code> that only yields the items that the <code data-dev-comment-type="paramref" class="paramref">predicate</code> returns true
+for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_LookAhead__1_Yoakke_Streams_IPeekableStream___0__System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.LookAhead%60%601(Yoakke.Streams.IPeekableStream%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L95">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_LookAhead_" data-uid="Yoakke.Streams.StreamExtensions.LookAhead*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_LookAhead__1_Yoakke_Streams_IPeekableStream___0__System_Int32_" data-uid="Yoakke.Streams.StreamExtensions.LookAhead``1(Yoakke.Streams.IPeekableStream{``0},System.Int32)">LookAhead&lt;TItem&gt;(IPeekableStream&lt;TItem&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Peeks ahead a given amount of items without consuming them. With <code data-dev-comment-type="paramref" class="paramref">offset</code> set to 0
+this is equivalent to <a class="xref" href="Yoakke.Streams.StreamExtensions.html#Yoakke_Streams_StreamExtensions_Peek__1_Yoakke_Streams_IPeekableStream___0__">Peek&lt;TItem&gt;(IPeekableStream&lt;TItem&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TItem LookAhead&lt;TItem&gt;(this IPeekableStream&lt;TItem&gt; stream, int offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream&lt;T&gt;</a> to peek in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset to look ahead.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TItem</span></td>
+        <td><p>The peeked item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_Peek__1_Yoakke_Streams_IPeekableStream___0__.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.Peek%60%601(Yoakke.Streams.IPeekableStream%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L85">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_Peek_" data-uid="Yoakke.Streams.StreamExtensions.Peek*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_Peek__1_Yoakke_Streams_IPeekableStream___0__" data-uid="Yoakke.Streams.StreamExtensions.Peek``1(Yoakke.Streams.IPeekableStream{``0})">Peek&lt;TItem&gt;(IPeekableStream&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the upcoming item without consuming it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TItem Peek&lt;TItem&gt;(this IPeekableStream&lt;TItem&gt; stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The <a class="xref" href="Yoakke.Streams.IStream-1.html">IStream&lt;T&gt;</a> to peek in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TItem</span></td>
+        <td><p>The next item in the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_ToBuffered__1_Yoakke_Streams_IStream___0__.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.ToBuffered%60%601(Yoakke.Streams.IStream%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L34">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_ToBuffered_" data-uid="Yoakke.Streams.StreamExtensions.ToBuffered*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_ToBuffered__1_Yoakke_Streams_IStream___0__" data-uid="Yoakke.Streams.StreamExtensions.ToBuffered``1(Yoakke.Streams.IStream{``0})">ToBuffered&lt;TItem&gt;(IStream&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts a stream to a <a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream&lt;T&gt;</a> by making it buffered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPeekableStream&lt;TItem&gt; ToBuffered&lt;TItem&gt;(this IStream&lt;TItem&gt; stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream</a>&lt;TItem&gt;</td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">stream</code> as an <a class="xref" href="Yoakke.Streams.IPeekableStream-1.html">IPeekableStream&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions_ToEnumerable__1_Yoakke_Streams_IStream___0__.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions.ToEnumerable%60%601(Yoakke.Streams.IStream%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L23">View Source</a>
+  </span>
+  <a id="Yoakke_Streams_StreamExtensions_ToEnumerable_" data-uid="Yoakke.Streams.StreamExtensions.ToEnumerable*"></a>
+  <h4 id="Yoakke_Streams_StreamExtensions_ToEnumerable__1_Yoakke_Streams_IStream___0__" data-uid="Yoakke.Streams.StreamExtensions.ToEnumerable``1(Yoakke.Streams.IStream{``0})">ToEnumerable&lt;TItem&gt;(IStream&lt;TItem&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts a stream to an <see cref="!:IEnumerable&lt;TItem>"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TItem&gt; ToEnumerable&lt;TItem&gt;(this IStream&lt;TItem&gt; stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Streams.IStream-1.html">IStream</a>&lt;TItem&gt;</td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to convert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TItem&gt;</td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">stream</code> as an <see cref="!:IEnumerable&lt;TItem>"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TItem</span></td>
+        <td><p>The item type of the stream.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Streams_StreamExtensions.md&amp;value=---%0Auid%3A%20Yoakke.Streams.StreamExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Streams/StreamExtensions.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

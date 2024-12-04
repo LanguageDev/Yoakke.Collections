@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using the Reporting library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using the Reporting library ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-the-reporting-library">Using the Reporting library</h1>
+
+<p>Creating nice diagnostic messages in console is hard. You have to print the appropriate source line, highlight the erroneous text, aligning multiple arrows in a line, ...</p>
+<h2 id="basic-usage">Basic usage</h2>
+<p>With the reporting library you can create nice error messages like this in an easy, declarative style:</p>
+<pre><code>error[E001]: type mismatch between int and bool in return value
+   ┌─ main.prg:8:4
+   │
+ 6 │ // This is the main
+ 7 │ fn main() -&gt; int {
+   │              --- defined to be int here
+ 8 │     println(&quot;Hello, World!&quot;);
+ 9 │     return true;
+   │            ^^^^ coerced to bool here
+10 │ }
+   │
+</code></pre>
+<p>To describe the above diagnostics, you'd write the following code:</p>
+<pre><code class="lang-csharp">var diagnostics = new Diagnostics()
+    .WithSeverity(Severity.Error)
+    .WithCode(&quot;E001&quot;)
+    .WithMessage(&quot;type mismatch between int and bool in return value&quot;)
+    .WithSourceInfo(new Location(sourceFile, returnValueRange, Severity.Error, &quot;coerced to bool here&quot;))
+    .WithSourceInfo(new Location(sourceFile, returnTypeRange, Severity.Note, &quot;defined to be int here&quot;));
+</code></pre>
+<p>Here, <code>sourceFile</code> is an <code>ISourceFile</code>, <code>returnValueRange</code> and <code>returnTypeRange</code> are <code>Range</code>s. For more on these types, please refer to the <code>Yoakke.Text</code> library.</p>
+<p><code>Severity</code> is a basic structure that describes a given severity level with a name and priority value. There are some <code>Severity</code> levels defined for you already (<code>Note</code>, <code>Help</code>, <code>Warning</code>, <code>Error</code>, <code>InternalError</code>).</p>
+<p>The above code does not print the diagnostics anywhere though. That requires a renderer. Fortunately, we can just use the default-provided one, if we are fine with the look presented above:</p>
+<pre><code class="lang-csharp">var presenter = new TextDiagnosticsPresenter(Console.Error);
+presenter.Present(diagnostics);
+</code></pre>
+<p>You can also write your custom presenter, you just need to implement the <code>IDiagnosticsPresenter</code>.</p>
+<h2 id="styles">Styles</h2>
+<p>The primary way to customize the provided renderer is through the <code>Style</code> property, which holds a <code>DiagnosticsStyle</code> type. <code>DiagnosticsStyle</code> describes different formatting options to apply.</p>
+<p>A short description of each:</p>
+<ul>
+<li><code>SeverityColors</code>: A dictionary that maps each severity level to a <code>ConsoleColor</code>.</li>
+<li><code>LineNumberColor</code>: The <code>ConsoleColor</code> to print line numbers with.</li>
+<li><code>DefaultColor</code>: The <code>ConsoleColor</code> to print anything that is not specified with.</li>
+<li><code>LineNumberPadding</code>: The padding character to use for line numbers if they are of different length.</li>
+<li><code>TabSize</code>: The width of a tab-character in spaces.</li>
+<li><code>SurroundingLines</code>: How many surrounding lines to print for the annotated line.</li>
+<li><code>ConnectUpLines</code>: How big of a gap can we still connect up with source lines instead of dotting it out.</li>
+</ul>
+<h2 id="custom-syntax-highlighting">Custom syntax highlighting</h2>
+<p>You can provide a custom syntax highlighter for diagnostic messages with the <code>SyntaxHighlighter</code> property inside <code>IDiagnosticsPresenter</code>s. They must implement the <code>ISyntaxHighlighter</code> interface.</p>
+<p>The interface defines a method, that must return which tokens belong to what category in a given source line:</p>
+<pre><code class="lang-csharp">public IReadOnlyList&lt;ColoredToken&gt; GetHighlightingForLine(ISourceFile sourceFile, int line);
+</code></pre>
+<p><strong>Note:</strong> The exact color of the different tokens should not be determined by the <code>ISyntaxHighlighter</code> implementor. The <code>ISyntaxHighlighter</code> interface defines a property named <code>Style</code>, that is of the type <code>SyntaxHighlightStyle</code>. Similarly to <code>DiagnosticsStyle</code>, this is where you would actually assign color to the tokens. So you can change your color schemes without affecting the syntax highlighter.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Documentation/docfx_project/articles/reporting.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

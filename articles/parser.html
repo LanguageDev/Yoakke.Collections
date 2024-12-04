@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using the Parser library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using the Parser library ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-the-parser-library">Using the Parser library</h1>
+
+<p>The parser library is constructed very similarly to the lexer, consisting of 2 libraries:</p>
+<ul>
+<li><code>Yoakke.Parser</code>: Basic structures for parsing.</li>
+<li><code>Yoakke.Parser.Generator</code>: A source generator that generates a parser from the annotations.</li>
+</ul>
+<p>Check out the <a href="#basic-structures">basic structures</a>, then <a href="#using-the-parser-generator">using the parser generator</a>. Since parsing is a lot more diverse then lexing, the library does not provide an as-complete abstraction for a handwritten version as the <code>LexerBase&lt;TKind&gt;</code>. Still, if you want to, you can utilize the very basic functionalities of <a href="#the-parserbase-abstraction"><code>ParserBase</code></a>.</p>
+<h2 id="basic-structures">Basic structures</h2>
+<p>Parsing something can succeed, or it can fail. Since both are likely outcomes - errors are not exceptional -, the outcome is modeled as a <code>ParseResult&lt;T&gt;</code> type, where the type-parameter <code>T</code> is the parsed value, given that it succeeded.</p>
+<p>The succeeding variant is <code>ParseOk&lt;T&gt;</code>, that contains the actual parsed value alongside other parsing-related information. The error variant is <code>ParseError</code>.</p>
+<h2 id="using-the-parser-generator">Using the parser generator</h2>
+<p>The parser generator can be used by annotating methods with BNF-like rules. Let's see a toy example demonstrating the basics:</p>
+<pre><code class="lang-csharp">[Parser(typeof(TokenType))]
+public partial class Parser
+{
+    [Rule(&quot;if_stmt: KwIf expr '{' stmt '}'&quot;)]
+    private static Statement MakeIf(
+        IToken&lt;TokenType&gt; kwIf,
+        Expression condition,
+        IToken&lt;TokenType&gt; openBrace,
+        Statement body,
+        IToken&lt;TokenType&gt; openBrace) =&gt; new IfStatement(condition, body);
+
+    [Rule(&quot;stmt : expr&quot;)]
+    private static Statement MakeExprStatement(Expression expr) =&gt; new ExprStatement(expr);
+
+    [Rule(&quot;stmt : if_stmt&quot;)]
+    private static Statement Identity(Statement stmt) =&gt; stmt;
+
+    [Rule(&quot;expr : IntLit '==' IntLit&quot;)]
+    [Rule(&quot;expr : IntLit '!=' IntLit&quot;)]
+    private static Expression MakeCmp(
+        IToken&lt;TokenType&gt; left,
+        IToken&lt;TokenType&gt; op,
+        IToken&lt;TokenType&gt; right) =&gt; new CmpExpression(left, op, right);
+
+    [Rule(&quot;expr : 'true' | 'false'&quot;)]
+    private static Expression MakeBool(IToken&lt;TokenType&gt; t) =&gt; new BoolExpression(t);
+}
+</code></pre>
+<p>The attribute <code>Parser(typeof(TokenType))</code> tells the source generator that the annotated class is a parser with rules inside it. Also, the kind of the tokens will be the specified type inside the attribute - <code>TokenType</code> in this case. You can choose not to pass in a token kind, in that case all tokens will be assumed to be <code>IToken</code>. <strong>Note, that it is important to qualify the parser class as <code>partial</code>.</strong> The generator has to generate code for the class, that can be only achieved through partial classes because of source generator limitations.</p>
+<p>Everything else inside the class is normal, except the methods marked with one or more <code>Rule</code> attributes. Those are methods that transform the resulting elements of the parse into a structure - like a Parse-Tree or AST. The attributes themselves contain the rules name, along with how it looks. It uses a custom, regex-like extension to BNF, you can find a reference for the supported constructs later in this document.</p>
+<p>The annotated methods can be static or non-static, the generator does not differentiate them. Their names, rule and method ordering also don't matter.</p>
+<p>The generated parser will inherit from <code>ParserBase</code> and will have <code>ParseXXX</code> methods defined publicly, where <code>XXX</code> is the <em>PascalCase</em> version of the given rule name. For example, the above parser would have a <code>ParseIfStmt</code>, <code>ParseStmt</code> and <code>ParseExpr</code> defined. The return type of these would be a <code>ParseResult&lt;T&gt;</code>, where <code>T</code> is what their corresponding method returns.</p>
+<p>Using the parser is very simple:</p>
+<pre><code class="lang-csharp">var parser = new Parser(lexer);
+var result = parser.ParseStmt();
+if (result.IsOk)
+{
+    var ast = result.Ok.Value;
+    // Do something with your AST
+}
+else
+{
+    var error = result.Error;
+    Console.WriteLine(&quot;Parse error!&quot;);
+    // We will talk about the structure of errors later
+}
+</code></pre>
+<p>The passed in lexer has to implement the <code>ILexer</code> interface defined in the <code>Yoakke.Lexer</code> library.</p>
+<h3 id="matching-terminals">Matching terminals</h3>
+<p>As you can see in the above sample, terminals can be matched two ways: by value and by kind.</p>
+<p>You can match by value by writing the textual value between single-quotes. This is how the <code>{</code> and <code>}</code> tokens are matched, as well as the keywords <code>true</code> and <code>false</code>.</p>
+<p>You can match by token kind by simply typing its enumeration field name. For example, the <code>KwIf</code>  and <code>IntLit</code> are matched this way - assuming they are defined in the enumeration <code>TokenType</code>.</p>
+<h3 id="the-structure-of-parse-errors">The structure of parse errors</h3>
+<p>Parse errors are described in the <code>ParseError</code> class. They might seem a bit complicated at first, that is because they contain all possibilities the code could have followed, when the error occurred. They also try to provide contextual information of where the error occurred.</p>
+<p><code>ParseError</code> contains the token it got stuck on (a member called <code>Got</code>) and a <code>Dictionary</code> of all alternative paths the parser took and errored out on that token. The dictionary maps from the context - which is the name of the rule that was parsed at the moment - to a smaller structure - <code>ParseErrorElement</code> -, that describes what that alternative expected instead of the gotten token.</p>
+<p>Printing out all the information the error provides would look something like:</p>
+<pre><code class="lang-csharp">var err = result.Error;
+foreach (var element in err.Elements.Values)
+{
+    Console.WriteLine($&quot;  expected {string.Join(&quot; or &quot;, element.Expected)} while parsing {element.Context}&quot;);
+}
+Console.WriteLine($&quot;  but got {(err.Got == null ? &quot;end of input&quot; : err.Got.Text)}&quot;);
+</code></pre>
+<h3 id="left-recursion">Left-recursion</h3>
+<p>The parser supports left- and right-recursion out of the box:</p>
+<pre><code class="lang-csharp">[Rule(&quot;left : left 'a'&quot;)]
+private static string Left(string a, IToken b) =&gt; $&quot;({a}), {b.Text}&quot;;
+
+[Rule(&quot;right : 'a' right&quot;)]
+private static string Left(IToken a, string b) =&gt; $&quot;{a.Text}, ({b})&quot;;
+
+[Rule(&quot;left : 'a'&quot;)]
+[Rule(&quot;right : 'a'&quot;)]
+private static string Identity(IToken a) =&gt; a.Text;
+</code></pre>
+<p>On the input <code>a a a a</code>, <code>ParseLeft</code> would return <code>&quot;(((a) a) a) a&quot;</code>, while <code>ParseRight</code> would return <code>a (a (a (a)))</code>.</p>
+<h3 id="precedence-parser">Precedence parser</h3>
+<p>Since parsing expression that contain operators with proper precedence and associativity is something most compilers have to deal with, there is support to simplify the process. You can build a precedence-based parser like so:</p>
+<pre><code class="lang-csharp">[Right(&quot;^&quot;)]
+[Left(&quot;*&quot;, &quot;/&quot;, &quot;%&quot;)]
+[Left(&quot;+&quot;, &quot;-&quot;)]
+[Rule(&quot;expression&quot;)]
+public static int BinOp(int a, IToken op, int b) =&gt; op.Text switch
+{
+    &quot;^&quot; =&gt; (int)Math.Pow(a, b),
+    &quot;*&quot; =&gt; a * b,
+    &quot;/&quot; =&gt; a / b,
+    &quot;%&quot; =&gt; a % b,
+    &quot;+&quot; =&gt; a + b,
+    &quot;-&quot; =&gt; a - b,
+    _ =&gt; throw new NotImplementedException(),
+};
+
+[Rule(&quot;expression : '(' expression ')'&quot;)]
+public static int Grouping(IToken _1, int n, IToken _2) =&gt; n;
+
+[Rule(&quot;expression : IntLit&quot;)]
+public static int IntLit(IToken token) =&gt; int.Parse(token.Text);
+</code></pre>
+<p>The above implements a calculator, that properly handles 6 arithmetic operations (addition, subtraction, multiplication, division, modulo and exponentiation) with their precedence and associativity. It also handles grouping using parenthesis.</p>
+<p>The precedence-table starts with the first <code>Left</code> or <code>Right</code> attribute on the top, each describing a level of precedence. The topmost attribute has the highest precedence - <code>[Right(&quot;^&quot;)]</code> in this case. <code>Left</code> defines a left-associative precedence level, <code>Right</code> defines a right-associative one.</p>
+<p>After the precedence-table, a dummy <code>Rule</code> has to be added, that defines the operands of the operators. In this case it is said to be <code>expression</code>, so the <code>ParseExpression</code> method will first walk through the precedence table, and treat all other definitions - like grouping - as the lowest level elements.</p>
+<h3 id="the-supported-bnf-flavor">The supported BNF flavor</h3>
+<p>The notation supported for the grammar is extended, some regular expression operators can be used to make writing common constructs simpler. Below is a table summarizing the available constructs.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Syntax</th>
+<th>Value type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Literal by text</td>
+<td><code>'text'</code></td>
+<td>An <code>IToken&lt;TKind&gt;</code>, if the parser is given a token-kind type, <code>IToken</code> otherwise</td>
+</tr>
+<tr>
+<td>Literal by kind</td>
+<td><code>KindName</code></td>
+<td>An <code>IToken&lt;TKind&gt;</code>, if the parser is given a token-kind type, <code>IToken</code> otherwise</td>
+</tr>
+<tr>
+<td>Rule invocation</td>
+<td><code>rule_name</code></td>
+<td>Whatever the invoked rule returns.</td>
+</tr>
+<tr>
+<td>Sequence</td>
+<td><code>a b c</code></td>
+<td>On top-level they become separate parameters. Nested, they become tuples of the elements.</td>
+</tr>
+<tr>
+<td>Alternative</td>
+<td><code>a | b</code></td>
+<td>The two sides are assumed to result in the same parsed type.</td>
+</tr>
+<tr>
+<td>Grouping</td>
+<td><code>(a b c)</code></td>
+<td>A tuple of all the sub-elements.</td>
+</tr>
+<tr>
+<td>Optional</td>
+<td><code>a?</code></td>
+<td>A nullable type of whatever the sub-element returns.</td>
+</tr>
+<tr>
+<td>0 or more</td>
+<td><code>a*</code></td>
+<td>An <code>IReadOnlyList&lt;T&gt;</code> of whatever the sub-element returns.</td>
+</tr>
+<tr>
+<td>1 or more</td>
+<td><code>a+</code></td>
+<td>An <code>IReadOnlyList&lt;T&gt;</code> of whatever the sub-element returns.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="punctuated-sequences">Punctuated sequences</h3>
+<p>Some patterns are kind of clumsy to handle, because their types become very ugly and complex to type. Most commonly, these would be punctuated sequences of values. Let's see how you would write them and what the library can give you to simplify these.</p>
+<h4 id="0-or-more-elements-without-a-trailing-separator">0 or more elements without a trailing separator</h4>
+<p>This would be how C handles it's argument list for a function call. 0 or more expressions, each separated by a comma, trailing comma is not allowed. In grammar you would write this as: <code>(expr (',' expr)*)?</code>. The type of this would be <code>(Expression, IReadOnlyList&lt;(IToken&lt;TKind&gt;, Expression)&gt;)?</code>, which is not very pretty.</p>
+<h4 id="1-or-more-elements-without-a-trailing-separator">1 or more elements without a trailing separator</h4>
+<p>Similar to the previous example, but at least one element is mandatory: <code>expr (',' expr)*</code>. The type of this is <code>(Expression, IReadOnlyList&lt;(IToken&lt;TKind&gt;, Expression)&gt;)</code>.</p>
+<h4 id="0-or-more-elements-with-an-optional-trailing-separator">0 or more elements with an optional trailing separator</h4>
+<p>This would be how C# handles it's brace-initialization. 0 or more initializers, each separated by a comma, the trailing comma is optional. In grammar this would be <code>(initializer (',' initializer)* ','?)?</code>. The type of this would be the worst so far: <code>(Initializer, IReadOnlyList&lt;(IToken&lt;TKind&gt;, Expression)&gt;, IToken&lt;TKind&gt;?)?</code>.</p>
+<h4 id="1-or-more-elements-with-an-optional-trailing-separator">1 or more elements with an optional trailing separator</h4>
+<p>Similar to the previous case, but at least one element is mandatory: <code>(initializer (',' initializer)* ','?)</code>. The type of this is <code>(Initializer, IReadOnlyList&lt;(IToken&lt;TKind&gt;, Expression)&gt;, IToken&lt;TKind&gt;?)</code>.</p>
+<h4 id="the-solution">The solution</h4>
+<p>Since these are very common patterns, the parser library provides a <code>Punctuated&lt;TValue, TPunct&gt;</code> type. <code>TValue</code> is the punctuated element type - like an <code>Expression</code>, and <code>TPunct</code> is the punctuation type - like a <code>IToken&lt;TKind&gt;</code>. The above complex types are implicitly convertible to <code>Punctuated&lt;TValue, TPunct&gt;</code>, which provides simpler access to its elements.</p>
+<p>Let's see an example usage:</p>
+<pre><code class="lang-csharp">[Rule(&quot;name_list : Lparen (Identifier (',' Identifier)*)? Rparen&quot;)]
+private static List&lt;string&gt; NameList(
+    IToken&lt;TokenType&gt; _lp,
+    Punctuated&lt;IToken&lt;TokenType&gt;, IToken&lt;TokenType&gt;&gt; elements,
+    IToken&lt;TokenType&gt; _rp) =&gt; elements.Values.Select(t =&gt; t.Text).ToList();
+</code></pre>
+<p><strong>Important:</strong> In case of 1-or-more patterns the result is a non-nullable tuple. If it's on the top level, the library will unwrap it into the parameter list, which makes it impossible to convert to <code>Punctuated&lt;TValue, TPunct&gt;</code>. To avoid that, group the construct inside parentheses.</p>
+<h2 id="the-parserbase-abstraction">The <code>ParserBase</code> abstraction</h2>
+<p>TBD</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Documentation/docfx_project/articles/parser.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

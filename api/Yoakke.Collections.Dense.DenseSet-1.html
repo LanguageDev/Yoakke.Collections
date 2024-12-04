@@ -1,0 +1,1163 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DenseSet&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DenseSet&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Yoakke.Collections.Dense.DenseSet`1">
+  
+  
+  <h1 id="Yoakke_Collections_Dense_DenseSet_1" data-uid="Yoakke.Collections.Dense.DenseSet`1" class="text-break">Class DenseSet&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A default <a class="xref" href="Yoakke.Collections.Dense.IDenseSet-1.html">IDenseSet&lt;T&gt;</a> implementation backed by a list of intervals.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DenseSet&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Yoakke.Collections.Dense.IDenseSet-1.html">IDenseSet</a>&lt;T&gt;</div>
+    <div><a class="xref" href="Yoakke.Collections.Dense.IReadOnlyDenseSet-1.html">IReadOnlyDenseSet</a>&lt;T&gt;</div>
+    <div><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</div>
+    <div><span class="xref">ICollection</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Yoakke.Collections.Dense.html">Yoakke.Collections.Dense</a></h6>
+  <h6><strong>Assembly</strong>: Yoakke.Collections.dll</h6>
+  <h5 id="Yoakke_Collections_Dense_DenseSet_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DenseSet&lt;T&gt; : object, IDenseSet&lt;T&gt;, IReadOnlyDenseSet&lt;T&gt;, IReadOnlyCollection&lt;Interval&lt;T&gt;&gt;, ICollection&lt;Interval&lt;T&gt;&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The set element and interval endpoint type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1__ctor.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L40">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1__ctor_" data-uid="Yoakke.Collections.Dense.DenseSet`1.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1__ctor" data-uid="Yoakke.Collections.Dense.DenseSet`1.#ctor">DenseSet()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseSet-1.html">DenseSet&lt;T&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseSet()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.%23ctor(Yoakke.Collections.Intervals.IntervalComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L49">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1__ctor_" data-uid="Yoakke.Collections.Dense.DenseSet`1.#ctor*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1__ctor_Yoakke_Collections_Intervals_IntervalComparer__0__" data-uid="Yoakke.Collections.Dense.DenseSet`1.#ctor(Yoakke.Collections.Intervals.IntervalComparer{`0})">DenseSet(IntervalComparer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Yoakke.Collections.Dense.DenseSet-1.html">DenseSet&lt;T&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DenseSet(IntervalComparer&lt;T&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.IntervalComparer-1.html">IntervalComparer</a>&lt;T&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td><p>The comparer to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Comparer.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Comparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L31">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Comparer_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Comparer*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Comparer" data-uid="Yoakke.Collections.Dense.DenseSet`1.Comparer">Comparer</h4>
+  <div class="markdown level1 summary"><p>The comparer used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntervalComparer&lt;T&gt; Comparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.IntervalComparer-1.html">IntervalComparer</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Count.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L23">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Count_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Count*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Count" data-uid="Yoakke.Collections.Dense.DenseSet`1.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsReadOnly.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L26">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsReadOnly_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsReadOnly*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsReadOnly" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Add_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Add(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L60">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Add_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Add*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Add_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseSet`1.Add(Yoakke.Collections.Intervals.Interval{`0})">Add(Interval&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an interval of elements to this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Add(Interval&lt;T&gt; interval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;</td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>The interval of elements to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if there was at least one new, unique element added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Clear.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L57">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Clear_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Clear*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Clear" data-uid="Yoakke.Collections.Dense.DenseSet`1.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Complement.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Complement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L112">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Complement_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Complement*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Complement" data-uid="Yoakke.Collections.Dense.DenseSet`1.Complement">Complement()</h4>
+  <div class="markdown level1 summary"><p>Inverts this set, meaning that any value that was contained before won't be contained and vice versa.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Complement()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Contains_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Contains(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L233">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Contains_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Contains*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Contains_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseSet`1.Contains(Yoakke.Collections.Intervals.Interval{`0})">Contains(Interval&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines if the set contains a full interval of items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(Interval&lt;T&gt; interval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;</td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>The interval to check if the set contains.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if all elements of <code data-dev-comment-type="paramref" class="paramref">interval</code> are contained in the set,
+otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_CopyTo_Yoakke_Collections_Intervals_Interval__0____System_Int32_.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.CopyTo(Yoakke.Collections.Intervals.Interval%7B%600%7D%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L342">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_CopyTo_" data-uid="Yoakke.Collections.Dense.DenseSet`1.CopyTo*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_CopyTo_Yoakke_Collections_Intervals_Interval__0____System_Int32_" data-uid="Yoakke.Collections.Dense.DenseSet`1.CopyTo(Yoakke.Collections.Intervals.Interval{`0}[],System.Int32)">CopyTo(Interval&lt;T&gt;[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(Interval&lt;T&gt;[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_ExceptWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.ExceptWith(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L304">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_ExceptWith_" data-uid="Yoakke.Collections.Dense.DenseSet`1.ExceptWith*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_ExceptWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.ExceptWith(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">ExceptWith(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes all intervals of elements in the specified collection from the current set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExceptWith(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection of intervals to remove from the set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_GetEnumerator.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L345">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_GetEnumerator_" data-uid="Yoakke.Collections.Dense.DenseSet`1.GetEnumerator*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_GetEnumerator" data-uid="Yoakke.Collections.Dense.DenseSet`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;Interval&lt;T&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IntersectWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IntersectWith(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L310">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IntersectWith_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IntersectWith*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IntersectWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.IntersectWith(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">IntersectWith(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Modifies the current set so that it contains only elements that are also in a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IntersectWith(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsProperSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsProperSubsetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L247">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsProperSubsetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsProperSubsetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsProperSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsProperSubsetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">IsProperSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the current set is a proper (strict) subset of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsProperSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is a proper subset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsProperSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsProperSupersetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L250">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsProperSupersetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsProperSupersetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsProperSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsProperSupersetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">IsProperSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the current set is a proper (strict) superset of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsProperSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the collection is a proper superset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsSubsetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L253">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSubsetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSubsetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">IsSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the current set is a subset of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is a subset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___System_Boolean__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsSubsetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L256">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSubsetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsSubsetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___System_Boolean__" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSubsetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}},System.Boolean@)">IsSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the current set is a subset of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSubsetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other, out bool proper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">proper</span></td>
+        <td><p>True gets written here, if the subset relation is a proper subset relation,
+otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is a subset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsSupersetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L264">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSupersetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSupersetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">IsSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the current set is a super set of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is a subset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___System_Boolean__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.IsSupersetOf(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L267">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSupersetOf*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_IsSupersetOf_IEnumerable_Yoakke_Collections_Intervals_Interval__0___System_Boolean__" data-uid="Yoakke.Collections.Dense.DenseSet`1.IsSupersetOf(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}},System.Boolean@)">IsSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt;, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Determine whether the current set is a super set of a specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSupersetOf(IEnumerable&lt;Interval&lt;T&gt;&gt; other, out bool proper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">proper</span></td>
+        <td><p>True gets written here, if the superset relation is a proper superset relation,
+otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is a subset of other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Overlaps_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Overlaps(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L286">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Overlaps_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Overlaps*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Overlaps_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.Overlaps(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">Overlaps(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the current set overlaps with the specified collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Overlaps(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if the current set and other share at least one common element, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Overlaps_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Overlaps(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L289">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Overlaps_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Overlaps*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Overlaps_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseSet`1.Overlaps(Yoakke.Collections.Intervals.Interval{`0})">Overlaps(Interval&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks, if set overlaps with any elements of an interval.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Overlaps(Interval&lt;T&gt; interval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;</td>
+        <td><span class="parametername">interval</span></td>
+        <td><p>The interval to check if the set overlaps.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True, if <code data-dev-comment-type="paramref" class="paramref">interval</code> contains elements of this set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_Remove_Yoakke_Collections_Intervals_Interval__0__.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.Remove(Yoakke.Collections.Intervals.Interval%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L109">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_Remove_" data-uid="Yoakke.Collections.Dense.DenseSet`1.Remove*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_Remove_Yoakke_Collections_Intervals_Interval__0__" data-uid="Yoakke.Collections.Dense.DenseSet`1.Remove(Yoakke.Collections.Intervals.Interval{`0})">Remove(Interval&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(Interval&lt;T&gt; interval)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;</td>
+        <td><span class="parametername">interval</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_SetEquals_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.SetEquals(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L297">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_SetEquals_" data-uid="Yoakke.Collections.Dense.DenseSet`1.SetEquals*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_SetEquals_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.SetEquals(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">SetEquals(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the current set and the specified collection contain the same elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetEquals(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the current set is equal to other, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_SymmetricExceptWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.SymmetricExceptWith(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L323">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_SymmetricExceptWith_" data-uid="Yoakke.Collections.Dense.DenseSet`1.SymmetricExceptWith*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_SymmetricExceptWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.SymmetricExceptWith(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">SymmetricExceptWith(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Modifies the current set so that it contains only elements that are present either in the current set
+or in the specified collection, but not both.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SymmetricExceptWith(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1_UnionWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601.UnionWith(IEnumerable%7BYoakke.Collections.Intervals.Interval%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L334">View Source</a>
+  </span>
+  <a id="Yoakke_Collections_Dense_DenseSet_1_UnionWith_" data-uid="Yoakke.Collections.Dense.DenseSet`1.UnionWith*"></a>
+  <h4 id="Yoakke_Collections_Dense_DenseSet_1_UnionWith_IEnumerable_Yoakke_Collections_Intervals_Interval__0___" data-uid="Yoakke.Collections.Dense.DenseSet`1.UnionWith(IEnumerable{Yoakke.Collections.Intervals.Interval{`0}})">UnionWith(IEnumerable&lt;Interval&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Modifies the current set so that it contains all elements that are present in the current set, in the
+specified collection, or in both.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnionWith(IEnumerable&lt;Interval&lt;T&gt;&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Yoakke.Collections.Intervals.Interval-1.html">Interval</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The collection to compare to the current set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Yoakke.Collections.Dense.IDenseSet-1.html">IDenseSet&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Yoakke.Collections.Dense.IReadOnlyDenseSet-1.html">IReadOnlyDenseSet&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IReadOnlyCollection&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">ICollection&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/new/master/Documentation/docfx_project/apidoc/new?filename=Yoakke_Collections_Dense_DenseSet_1.md&amp;value=---%0Auid%3A%20Yoakke.Collections.Dense.DenseSet%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LanguageDev/Yoakke/blob/master/Sources/Shared/Libraries/Collections/Dense/DenseSet.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
